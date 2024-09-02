@@ -7,7 +7,11 @@ In this session, you will deep-dive into the solution components of SAP Integrat
 
 ## Overview
 
-In this session, you will learn to activate, setup and operate Edge Integration Cell, design integrations and APIs, run and monitor them on Edge Integration Cell.
+Customers are looking at elevating and migrating their mature production-grade deployments of SAP Process Integration to SAP Integration Suite. This session will introduce you to simple ways of achieving so.
+We first look at a SAP Process Intgration (PI) landscape with a simple Integrated Configuration object (ICO) representing a Web Service-based Integration pattern to an OnPremise S/4HANA System. 
+We then dive into migration assessment to assess the technical efforts involved in the migration process and evaluate how various integration scenarios might be migrated. After having finished the assessment of the current SAP Process Integration landscape and having estimated the effort needed to migrate with the Interface Migration Assessment capability, the next step is the actual migration. The goal of the migration tool is to provide a semi-automated migration where interfaces in SAP Cloud Integration will be automatically created based on SAP Process Integration information so that ideally 60-70% of technical migration efforts are automated. The migration of scenarios is based on a template approach, which means that integration flow templates are used as a skeleton to migrate the content and create the final integration flows, and maximize reusability.
+We then look at Edge Integration Cell, the next-generation hybrid integration runtime offered with SAP Integration Suite as a deployment vehicle for the migrated content. Our principal goal here is to demonstrate a 'Ground to Ground' integration pattern. We achieve this by putting the Edge Integration Cell runtime, the SAP PI system, and S/4HANA System in the same network zone as opposed to opening everything to the Internet.
+We finally look at deployment and managing an API Artefact, keeping the motivations for an API-centric integration in mind.  
 
 ## Requirements
 
