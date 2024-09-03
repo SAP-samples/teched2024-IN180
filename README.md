@@ -2,7 +2,7 @@
 
 ## Description
 
-This repository contains the material for the SAP TechEd 2024 session IN180 - Future-proof your SAP PI/PO investments with SAP Integration Suite.
+This repository contains the material for the SAP TechEd 2024 session IN180 - Future-proof your SAP PI/PO investments with SAP Integration Suite. <br>
 In this session, you will deep-dive into the solution components of SAP Integration Suite, primarily Cloud Integration, Integration Assessment, and Edge Integration cell, the next-generation hybrid integration runtime offered with SAP Integration Suite, which would enable you to manage APIs and run integration scenarios within your local landscape (private cloud or on-premise).
 
 ## Overview
