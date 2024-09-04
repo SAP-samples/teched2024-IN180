@@ -6,7 +6,7 @@ In this exercise, you will learn how to migrate your existing integration scenar
 
 In the SAP Integration Suite landing page, scroll down to Capabilities, and select Create Requests from the Assess Migration Scenarios tile.
 
-<br>![](/exercises/ex0/images/1 AssessMigrationScenario.png)
+<br>![](/exercises/ex2/images/1 AssessMigrationScenario.png)
 
 ## Checkout Configuration for Process Orchestration System
 
