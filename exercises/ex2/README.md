@@ -6,7 +6,7 @@ In this exercise, you will learn how to migrate your existing integration scenar
 
 In the SAP Integration Suite landing page, scroll down to Capabilities, and select Create Requests from the Assess Migration Scenarios tile.
 
-<br>![](/images/1%20AssessMigrationScenario.png)
+<be>![](./images/AssessMigrationScenario.png)
 
 ## Checkout Configuration for Process Orchestration System
 
@@ -14,15 +14,17 @@ After completing these steps you will be able to test the connection to your SAP
 
 Note: For this exercise, the connection to a cloud connector has been established, the PO system is connected to the SAP Integration Suite tenant and you do not have Admin roles to add a new system. <br><br>
 
-Navigate to Settings and Select J2E System to view the details. <br><br>
+1. Navigate to **Settings > Integrations**, under System, select J2E System to view the details. <br><be>
 
+<be>![](/exercises/ex2/images/TestPOSystem.png)
 
 For this exercise, the system setup is already done and you can click on Test Connection to check the connection to PO system. <br><br>
 
-
 Note: In the Migration Assessment Application, the page now displays information about the Integration Directory and, optionally, the Enterprise Services Repository you connected to your previously created system. <br><br>
 
-In the Migration Assessment Application, navigate to Configure > Rules <br><br>
+2. In the Migration Assessment Application, navigate to **Configure > Rules** <br><be>
+
+<be>![](/exercises/ex2/images/ConfigureRules.png)
 
 Here you can find a list of rules predefined by SAP. Rules are a set of characteristics according to which the application evaluates whether an integration scenario can be migrated and what effort you can expect. <br><br>
 
@@ -30,8 +32,9 @@ Note: Currently, you can’t add custom rules or edit the standard rules. You ca
 
 As an example, select the rule SenderAdapterType <br><br>
 
+3. Open the variant MAIN_SenderAdapterType <br><be>
 
-Open the variant MAIN_SenderAdapterType <br><be>
+<be>![](/exercises/ex2/images/SenderAdapterType.png)
 
 ## Optional - Walkthrough of adding a Process Orchestration System
 Optionally you can try out this section to add the PO system in your own landscape. For this exercise, you do not have the roles to Add the system but we want to walk you through the steps so that you can do it on your landscape. <br><br>
