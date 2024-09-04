@@ -1,11 +1,12 @@
 # Exercise 2 - Migration Assessment
 
-n this exercise, you will learn how to migrate your existing integration scenarios to SAP Integration Suite with the Migration Assessment capability of SAP Integration Suite. This offering helps you estimate the technical efforts involved in the migration process and evaluates how various integration scenarios might be migrated.
+In this exercise, you will learn how to migrate your existing integration scenarios to SAP Integration Suite with the Migration Assessment capability of SAP Integration Suite. This offering helps you estimate the technical efforts involved in the migration process and evaluates how various integration scenarios might be migrated. Once you've extracted your integration scenarios and executed a scenario evaluation, you can find the modernization recommendations in the downloadable reports and the dashboard.
 
 ## Access Migration Assessment capabilities
 
 In the SAP Integration Suite landing page, scroll down to Capabilities, and select Create Requests from the Assess Migration Scenarios tile.
 
+<br>![](/exercises/ex0/images/1 AssessMigrationScenario.png)
 
 ## Checkout Configuration for Process Orchestration System
 
