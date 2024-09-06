@@ -57,22 +57,21 @@ Usually, the data extraction takes some time depending on the number of integrat
 
 2. We recommend you reuse the already existing request as creating a new one would take a few minutes. If you want to create a new request, Click on Create. Otherwise, you can continue with Create a Scenario Evaluation Request. <br><br>
 
-<be>![](/exercises/ex2/images/UseDataExtractionReq.png)
+<be>![](/exercises/ex2/images/CreateDE.png)
 
 3. Enter a Request Name (append with your unique identifier maybe UserXX-Extraction where XX is your userid), and select the System you want to connect to (in our case it is J2E from the drop-down). Click on Create. <br><br>
 
-<be>![](/exercises/ex2/images/CreateDE.png)
+<be>![](/exercises/ex2/images/DENameCreate.png)
 
 4. The data extraction starts. It should show the status In Process. From time to time, you can refresh to check if the request has been completed. <br><be>
 
 <be>![](/exercises/ex2/images/DEInProgress.png)
 
-
-Once the extraction finishes, the new request appears in the list of data extraction requests with the status Completed. Choose the Check extraction logs icon to view the data extraction log which provides you with details about the data extraction. <br><be>
+5. Once the extraction finishes, the new request appears in the list of data extraction requests with the status Completed. Choose the Check extraction logs icon to view the data extraction log which provides you with details about the data extraction. <br><be>
 
 <be>![](/exercises/ex2/images/DEComplete.png)
 
-The log shows you the different steps of the data extraction, its progress if still In Progress, warnings and errors during the extraction, etc. In the log, you can filter on the log level. Furthermore, you can download the log in Excel format. <br><br>
+6. The log shows you the different steps of the data extraction, its progress if still In Progress, warnings and errors during the extraction, etc. In the log, you can filter on the log level. Furthermore, you can download the log in Excel format. <br><br>
 
 <be>![](/exercises/ex2/images/DELogs.png)
 
