@@ -51,23 +51,30 @@ You will be able to see the newly added systems and additionally you can check t
 ## Reuse or Create a new Data Extraction Request
 Usually, the data extraction takes some time depending on the number of integration scenarios configured on SAP Process Orchestration. For our exercise, we have configured a handful of scenarios in the SAP Process Orchestration system, so that the extraction runs fast. A recommendation from our side would be to reuse the already created Data Extraction Request. If you still want to create a new one, please follow the below steps. <br><br>
 
-In the Migration Assessment Application, navigate to Request Data Extraction. <br><br>
+1. In the Migration Assessment Application, navigate to **Request>Data Extraction**. <br><br>
+
+<be>![](/exercises/ex2/images/RequestDataExtraction.png)
+
+2. We recommend you reuse the already existing request as creating a new one would take a few minutes. If you want to create a new request, Click on Create. Otherwise, you can continue with Create a Scenario Evaluation Request. <br><br>
+
+<be>![](/exercises/ex2/images/UseDataExtractionReq.png)
+
+3. Enter a Request Name (append with your unique identifier maybe UserXX-Extraction where XX is your userid), and select the System you want to connect to (in our case it is J2E from the drop-down). Click on Create. <br><br>
+
+<be>![](/exercises/ex2/images/CreateDE.png)
+
+4. The data extraction starts. It should show the status In Process. From time to time, you can refresh to check if the request has been completed. <br><be>
+
+<be>![](/exercises/ex2/images/DEInProgress.png)
 
 
-We recommend you reuse the already existing request as creating a new one would take a few minutes. If you want to create a new request, Click on Create. Otherwise, you can continue with Create a Scenario Evaluation Request. <br><br>
+Once the extraction finishes, the new request appears in the list of data extraction requests with the status Completed. Choose the Check extraction logs icon to view the data extraction log which provides you with details about the data extraction. <br><be>
 
-
-Enter a Request Name (append with your unique identifier maybe DemoXX where XX is your user from 00 to 99), and select the System you want to connect to (in our case it is J2E from the drop-down). Click on Create. <br><br>
-
-
-The data extraction starts. It should show the status In Process. From time to time, you can refresh to check if the request has been completed. <br><br>
-
-
-Once the extraction finishes, the new request appears in the list of data extraction requests with the status Completed. Choose the Check extraction logs icon to view the data extraction log which provides you with details about the data extraction. <br><br>
-
+<be>![](/exercises/ex2/images/DEComplete.png)
 
 The log shows you the different steps of the data extraction, its progress if still In Progress, warnings and errors during the extraction, etc. In the log, you can filter on the log level. Furthermore, you can download the log in Excel format. <br><br>
 
+<be>![](/exercises/ex2/images/DELogs.png)
 
 ## Create a Scenario Evaluation Request
 Assess your integration scenarios using the information from the data extraction requests. The prerequisite is that you have at least one data extraction request in status Completed. <br><br>
