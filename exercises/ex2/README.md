@@ -79,45 +79,55 @@ Usually, the data extraction takes some time depending on the number of integrat
 Assess your integration scenarios using the information from the data extraction requests. The prerequisite is that you have at least one data extraction request in status Completed. <br><br>
 
 
-In the Migration Assessment application, navigate to Request --> Scenario Evaluation. <br><br>
+1. In the Migration Assessment application, navigate to **Request>Scenario Evaluation**. <br><br>
 
+<be>![](/exercises/ex2/images/RequestScenarioEvaluation.png)
 
-Select Create <br><br>
+2. Select Create <br><be>
 
+<be>![](/exercises/ex2/images/ScenarioEvaluationCreate.png)
 
-Enter a Request Name as DemoXX (where XX is your user from 00 to 99)and choose a Data Extraction Request from the drop-down or the one you executed previously. For this specific run of your scenario evaluation, enter an Evaluation Run Name as DemoXX (where XX is your user from 00 to 99)and a Description. <br><br>
+3. Enter a Request Name as DemoXX (where XX is your userid)and choose a Data Extraction Request from the drop-down or the one you executed previously. For this specific run of your scenario evaluation, enter an Evaluation Run Name as DemoXX (where XX is your userid)and a Description. <br><br>
 
+<be>![](/exercises/ex2/images/ScenarioEvaluationDetails.png)
 
 Note: You usually run a new evaluation request for a new data extraction whereas you run a new evaluation run whenever the assessment rules have been changed. <br><br>
 
-The new request appears in the list of scenario evaluation requests in Status In Progress. <br><br>
+4. The new request appears in the list of scenario evaluation requests in Status In Progress. <br><be>
 
+<be>![](/exercises/ex2/images/ScenarioEvaluationInProgress.png)
 
-Refresh and wait until the request changes to status Completed. Different Actions can be performed for a scenario evaluation request. <br><br>
+5. Refresh and wait until the request changes to status Completed. Different Actions can be performed for a scenario evaluation request. <br><be>
+
+<be>![](/exercises/ex2/images/ScenarioEvaluationCompleted.png)
 
 
 ## View Generated Reports
 Access and download analysis of your scenario evaluation runs with details specific to your integration scenarios, for example, adapters and an overview of the rules used in the evaluation. Further, you can download details about the latest evaluation run in one of two formats .xlsx file and .pdf file <br><br>
 
-Let’s start with opening the dashboard. Select the Open Dashboard icon. <br><br>
+1. Let’s start with opening the dashboard. Select the Open Dashboard icon. <br><br>
 
+<be>![](/exercises/ex2/images/DashboardOverview.png)
 
-The dashboard shows you an analysis of your scenario evaluation runs with details specific to your integration scenarios, i.e., scenarios grouped by assessment categories, scenarios grouped by rough t-shirt effort estimation, statistics about adapters used in your integration scenarios, etc. You can switch between the data of all runs performed for the scenario evaluation request so far (note, if you haven’t triggered another analysis, there is only one entry in the drop-down menu). <br><br>
+2. The dashboard shows you an analysis of your scenario evaluation runs with details specific to your integration scenarios, i.e., scenarios grouped by assessment categories, scenarios grouped by rough t-shirt effort estimation, statistics about adapters used in your integration scenarios, etc. You can switch between the data of all runs performed for the scenario evaluation request so far (note, if you haven’t triggered another analysis, there is only one entry in the drop-down menu). <br><be>
+<be>![](/exercises/ex2/images/DEInProgress.png)
 
+3. Switch to the Integration Scenarios tab, and you will see the list of all integration scenarios, including effort size and assessment category. <br><br>
 
-Switch to the Integration Scenarios tab, and you see the list of all integration scenarios including effort size and assessment category. <br><br>
+<be>![](/exercises/ex2/images/IntegrationScenarioTab.png)
 
+4. Switch back to the list of Scenario Evaluation requests. From the Additional Options menu, you can select Trigger Analysis to schedule a new evaluation run based on the most recent data extraction. Let's skip this for now as data did not change. <br><br>
+Furthermore, you have the option to download details about the latest evaluation run either in an Excel format or as a PDF file. <br><be>
 
-Switch back to the list of Scenario Evaluation requests. From the Additional Options menu, you can select Trigger Analysis to schedule a new evaluation run based on the most recent data extraction. Let's skip this for now as data did not change. <br><br>
+<be>![](/exercises/ex2/images/DEInProgress.png)
 
+5. The option as .xlsx file lists all integration scenarios that were part of the request with migration effort and status as well as the rules applied to them. <br><be>
 
-Furthermore, you have the option to download details about the latest evaluation run either in an Excel format or as a PDF file. <br><br>
+<be>![](/exercises/ex2/images/ExcelReport.png)
 
+. The option as .pdf file features the previously mentioned details about the integration scenarios while also providing a written summary of adapters and the assessment in general, with charts and tables as visual aids. It also maps the t-shirt effort estimation to effort estimation in person days based on project experience. This file is suited as a summarizing report, that can be used for example for management. <br><be>
 
-The option as .xlsx file lists all integration scenarios that were part of the request with migration effort and status as well as the rules applied to them. <br><br>
-
-
-The option as .pdf file features the previously mentioned details about the integration scenarios while also providing a written summary of adapters and the assessment in general, with charts and tables as visual aids. It also maps the t-shirt effort estimation to effort estimation in person days based on project experience. This file is suited as a summarizing report, that can be used for example for management. <br><br>
+<be>![](/exercises/ex2/images/pdfReport.png)
 
 ## Summary
 
