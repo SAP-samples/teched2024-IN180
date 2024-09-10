@@ -24,7 +24,7 @@ Note: In the Migration Assessment Application, the page now displays information
 
 2. In the Migration Assessment Application, navigate to **Configure > Rules** <br><be>
 
-<be>![](/exercises/ex2/images/ConfigureRules.png)
+<be>![](/exercises/ex3/images/ConfigureRules.png)
 
 Here you can find a list of rules predefined by SAP. Rules are a set of characteristics according to which the application evaluates whether an integration scenario can be migrated and what effort you can expect. <br><br>
 
@@ -34,7 +34,7 @@ As an example, select the rule SenderAdapterType <br><br>
 
 3. Open the variant MAIN_SenderAdapterType <br><be>
 
-<be>![](/exercises/ex2/images/SenderAdapterType.png)
+<be>![](/exercises/ex3/images/SenderAdapterType.png)
 
 ## Optional - Walkthrough of adding a Process Orchestration System
 Optionally you can try out this section to add the PO system in your own landscape. For this exercise, you do not have the roles to Add the system but we want to walk you through the steps so that you can do it on your landscape. <br><br>
@@ -53,15 +53,15 @@ Usually, the data extraction takes some time depending on the number of integrat
 
 1. In the Migration Assessment Application, navigate to **Request>Data Extraction**. <br><br>
 
-<be>![](/exercises/ex2/images/RequestDataExtraction.png)
+<be>![](/exercises/ex3/images/RequestDataExtraction.png)
 
 2. We recommend you reuse the already existing request as creating a new one would take a few minutes. If you want to create a new request, Click on Create. Otherwise, you can continue with Create a Scenario Evaluation Request. <br><br>
 
-<be>![](/exercises/ex2/images/CreateDE.png)
+<be>![](/exercises/ex3/images/CreateDE.png)
 
 3. Enter a Request Name (append with your unique identifier maybe UserXX-Extraction where XX is your userid), and select the System you want to connect to (in our case it is J2E from the drop-down). Click on Create. <br><br>
 
-<be>![](/exercises/ex2/images/DENameCreate.png)
+<be>![](/exercises/ex3/images/DENameCreate.png)
 
 4. The data extraction starts. It should show the status In Process. From time to time, you can refresh to check if the request has been completed. <br><be>
 
@@ -81,15 +81,15 @@ Assess your integration scenarios using the information from the data extraction
 
 1. In the Migration Assessment application, navigate to **Request>Scenario Evaluation**. <br><br>
 
-<be>![](/exercises/ex2/images/RequestScenarioEvaluation.png)
+<be>![](/exercises/ex3/images/RequestScenarioEvaluation.png)
 
 2. Select Create <br><be>
 
-<be>![](/exercises/ex2/images/ScenarioEvaluationCreate.png)
+<be>![](/exercises/ex3/images/ScenarioEvaluationCreate.png)
 
 3. Enter a Request Name as DemoXX (where XX is your userid)and choose a Data Extraction Request from the drop-down or the one you executed previously. For this specific run of your scenario evaluation, enter an Evaluation Run Name as DemoXX (where XX is your userid)and a Description. <br><br>
 
-<be>![](/exercises/ex2/images/ScenarioEvaluationDetails.png)
+<be>![](/exercises/ex3/images/ScenarioEvaluationDetails.png)
 
 Note: You usually run a new evaluation request for a new data extraction whereas you run a new evaluation run whenever the assessment rules have been changed. <br><br>
 
@@ -107,27 +107,27 @@ Access and download analysis of your scenario evaluation runs with details speci
 
 1. Let’s start with opening the dashboard. Select the Open Dashboard icon. <br><br>
 
-<be>![](/exercises/ex2/images/DashboardOverview.png)
+<be>![](/exercises/ex3/images/DashboardOverview.png)
 
 2. The dashboard shows you an analysis of your scenario evaluation runs with details specific to your integration scenarios, i.e., scenarios grouped by assessment categories, scenarios grouped by rough t-shirt effort estimation, statistics about adapters used in your integration scenarios, etc. You can switch between the data of all runs performed for the scenario evaluation request so far (note, if you haven’t triggered another analysis, there is only one entry in the drop-down menu). <br><be>
-<be>![](/exercises/ex2/images/DEInProgress.png)
+<be>![](/exercises/ex3/images/DEInProgress.png)
 
 3. Switch to the Integration Scenarios tab, and you will see the list of all integration scenarios, including effort size and assessment category. <br><br>
 
-<be>![](/exercises/ex2/images/IntegrationScenarioTab.png)
+<be>![](/exercises/ex3/images/IntegrationScenarioTab.png)
 
 4. Switch back to the list of Scenario Evaluation requests. From the Additional Options menu, you can select Trigger Analysis to schedule a new evaluation run based on the most recent data extraction. Let's skip this for now as data did not change. <br><br>
 Furthermore, you have the option to download details about the latest evaluation run either in an Excel format or as a PDF file. <br><be>
 
-<be>![](/exercises/ex2/images/DEInProgress.png)
+<be>![](/exercises/ex3/images/DEInProgress.png)
 
 5. The option as .xlsx file lists all integration scenarios that were part of the request with migration effort and status as well as the rules applied to them. <br><be>
 
-<be>![](/exercises/ex2/images/ExcelReport.png)
+<be>![](/exercises/ex3/images/ExcelReport.png)
 
 . The option as .pdf file features the previously mentioned details about the integration scenarios while also providing a written summary of adapters and the assessment in general, with charts and tables as visual aids. It also maps the t-shirt effort estimation to effort estimation in person days based on project experience. This file is suited as a summarizing report, that can be used for example for management. <br><be>
 
-<be>![](/exercises/ex2/images/pdfReport.png)
+<be>![](/exercises/ex3/images/pdfReport.png)
 
 ## Summary
 
