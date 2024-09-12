@@ -16,7 +16,7 @@ Note: For this exercise, the connection to a cloud connector has been establishe
 
 1. Navigate to **Settings > Integrations**, under System, select J2E System to view the details. <br><be>
 
-<be>![](/exercises/ex2/images/TestPOSystem.png)
+<be>![](/exercises/ex3/images/TestPOSystem.png)
 
 For this exercise, the system setup is already done and you can click on Test Connection to check the connection to PO system. <br><br>
 
@@ -65,15 +65,15 @@ Usually, the data extraction takes some time depending on the number of integrat
 
 4. The data extraction starts. It should show the status In Process. From time to time, you can refresh to check if the request has been completed. <br><be>
 
-<be>![](/exercises/ex2/images/DEInProgress.png)
+<be>![](/exercises/ex3/images/DEInProgress.png)
 
 5. Once the extraction finishes, the new request appears in the list of data extraction requests with the status Completed. Choose the Check extraction logs icon to view the data extraction log which provides you with details about the data extraction. <br><be>
 
-<be>![](/exercises/ex2/images/DEComplete.png)
+<be>![](/exercises/ex3/images/DEComplete.png)
 
 6. The log shows you the different steps of the data extraction, its progress if still In Progress, warnings and errors during the extraction, etc. In the log, you can filter on the log level. Furthermore, you can download the log in Excel format. <br><br>
 
-<be>![](/exercises/ex2/images/DELogs.png)
+<be>![](/exercises/ex3/images/DELogs.png)
 
 ## Create a Scenario Evaluation Request
 Assess your integration scenarios using the information from the data extraction requests. The prerequisite is that you have at least one data extraction request in status Completed. <br><br>
@@ -95,11 +95,11 @@ Note: You usually run a new evaluation request for a new data extraction whereas
 
 4. The new request appears in the list of scenario evaluation requests in Status In Progress. <br><be>
 
-<be>![](/exercises/ex2/images/ScenarioEvaluationInProgress.png)
+<be>![](/exercises/ex3/images/ScenarioEvaluationInProgress.png)
 
 5. Refresh and wait until the request changes to status Completed. Different Actions can be performed for a scenario evaluation request. <br><be>
 
-<be>![](/exercises/ex2/images/ScenarioEvaluationCompleted.png)
+<be>![](/exercises/ex3/images/ScenarioEvaluationCompleted.png)
 
 
 ## View Generated Reports
