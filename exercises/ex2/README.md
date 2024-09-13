@@ -1,4 +1,4 @@
-# Exercise 1 - SAP PI walkthrough
+# Exercise 1 - SAP Process Integration walkthrough
 
 In this exercise, you will
 
