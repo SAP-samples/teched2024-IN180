@@ -1,4 +1,4 @@
-# Exercise 1 - Access and explore SAP Integration Suite
+# Exercise 1 - SAP PI walkthrough
 
 In this exercise, you will
 
