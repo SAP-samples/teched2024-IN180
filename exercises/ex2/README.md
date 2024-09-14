@@ -6,7 +6,7 @@ In this exercise, you will
 - note that there is no hands-on for this exercise as there are logistical challenges in enabling each participant to access an onpremise system, hence a virtual walkthrough by looking at screenshots alone.
 
 ## Access a virtual machine (or a physical server) connected to the SAP Process Integration instance
-
+<br>![](/exercises/ex2/images/ex2_14.png)
 ## Connect to the Integration Directory
 1. Switch back to the SAP Integration Suite landing page by pressing the SAP logo.
 
