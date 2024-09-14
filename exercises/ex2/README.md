@@ -29,6 +29,16 @@ In this exercise, you will
 
 <br>![](/exercises/ex2/images/ex2_8.png)
 
+<br>![](/exercises/ex2/images/ex2_9.png)
+
+<br>![](/exercises/ex2/images/ex2_10.png)
+
+<br>![](/exercises/ex2/images/ex2_11.png)
+
+<br>![](/exercises/ex2/images/ex2_12.png)
+
+<br>![](/exercises/ex2/images/ex2_13.png)
+
 
 
 
