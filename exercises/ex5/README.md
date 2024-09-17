@@ -12,9 +12,53 @@ As a test, we invoke the $metadata resource and we can already see that the Busi
 ![](/exercises/ex5/images/ex5_0_1.png)
 
 ## Create an API Artefact
+![](/exercises/ex5/images/ex5_1.png)
+
+![](/exercises/ex5/images/ex5_2.png)
+
+![](/exercises/ex5/images/ex5_3.png)
+
+![](/exercises/ex5/images/ex5_4.png)
+
+![](/exercises/ex5/images/ex5_5.png)
+
+![](/exercises/ex5/images/ex5_6.png)
+
+![](/exercises/ex5/images/ex5_7.png)
 
 ## Configure the API Artefact
 
+![](/exercises/ex5/images/ex5_8.png)
+
+![](/exercises/ex5/images/ex5_9.png)
+
+![](/exercises/ex5/images/ex5_10.png)
+
+![](/exercises/ex5/images/ex5_11.png)
+
+![](/exercises/ex5/images/ex5_12.png)
+
+![](/exercises/ex5/images/ex5_13.png)
+
+![](/exercises/ex5/images/ex5_14.png)
+
 ## Add policies to manage the API Artefact
+
+![](/exercises/ex5/images/ex5_15.png)
+
+![](/exercises/ex5/images/ex5_16.png)
+
+![](/exercises/ex5/images/ex5_17.png)
+
+![](/exercises/ex5/images/ex5_18.png)
+
+![](/exercises/ex5/images/ex5_19.png)
+
+![](/exercises/ex5/images/ex5_20.png)
+
+![](/exercises/ex5/images/ex5_21.png)
+
+![](/exercises/ex5/images/ex5_22.png)
+
 
 ## Test the API
