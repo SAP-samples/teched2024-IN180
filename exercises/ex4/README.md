@@ -106,21 +106,53 @@ After completing these steps you will be able to deploy the Integration flow and
    
 Now you are all set to test your scenario!
 
-## Verify the Interface via Insomnia
+## Verify the Interface via REST Client
 
-After completing these steps you will be able to test the interface and get the desired result of converting a number into a text.
+Having completed these steps, you are now ready to test the interface. To do this, you will need a REST client, such as [Bruno](https://www.usebruno.com/downloads). 
 
-1. Open Insomnia and click on <b>Use the local Scratch Pad</b>.
+1. Open Bruno and click on <b>Create Collection</b>.
 
-<br>![image](/exercises/ex4/images/Insomnia-1.png)  
+<br>![image](/exercises/ex4/images/Create_Coll.png)  
 
-2. Create a <b>New HTTP-Request</b>.
+2. Provide a Name, e.g. **SAP Integration Suite Exercise**, enter a Folder Location on your device and press <b>Create</b>.
 
-<br>![image](/exercises/ex4/images/Insomnia-2.png)  
+<br>![image](/exercises/ex4/images/Create_Coll2.png)  
 
-3. <b>Change the Request Method from GET to POST</b>, by clicking the dropdown icon next to GET.  
+3. Click on the three dots next to your created package and press<b>New Request</b>. 
 
-<br>![image](/exercises/ex4/images/Insomnia-3.png)  
+<br>![image](/exercises/ex4/images/New_Request.png)  
+
+4. Provide a Name, e.g. **Exercise 4 - SOAP to SOAP scenario** and past the endpoint URL noted in previous exercise. Press **Create**.
+
+<br>![image](/exercises/ex4/images/New_Request2.png)  
+
+
+5. In case there pops-up a dialog for JavaScript execution, you can choose **Safe Mode** as there is no Javascript required for this exercise.
+
+<br>![image](/exercises/ex4/images/SafeMode.png)
+
+6. Switch to tab **Body**, Choose Content-Type **XML** and provide following payload:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cm="http://demo.sap.com/cm">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <cm:MT_CreditManagementAccountRequest>
+         <!--Optional:-->
+         <DebtorPartyInternalID>MDG_CU01</DebtorPartyInternalID>
+         <!--Optional:-->
+         <CreditsegmentInternalID>0002</CreditsegmentInternalID>
+      </cm:MT_CreditManagementAccountRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+```
+
+7. Switch to tab **Auth** and choose **OAuth 2.0**. Grant Type must be set to **Client Credentials**. The authentication details can be found in the booker application. Past them and press **Get Access Token**.
+
+<br>![image](/exercises/ex4/images/Auth_Bruno.png)  
+<br>![image](/exercises/ex4/images/Auth_Booker.png) 
+
 
 4. <b>Paste the endpoint</b> from you integration flow as URL.  
 
