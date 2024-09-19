@@ -1,0 +1,109 @@
+
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:p1="http://demo.sap.com/cm" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="SI_CreditManagementAccountRead_Outbound" targetNamespace="http://demo.sap.com/cm">
+   <wsdl:documentation />
+   <wsp:UsingPolicy wsdl:required="true" />
+   <wsp:Policy wsu:Id="OP_SI_CreditManagementAccountRead_Outbound" />
+   <wsdl:types>
+      <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://demo.sap.com/cm" targetNamespace="http://demo.sap.com/cm">
+         <xsd:element name="MT_CreditManagementAccountRequest" type="DT_CreditManagementAccountRequest" />
+         <xsd:element name="MT_CreditManagementAccountResponse" type="DT_CreditManagementAccountResponse" />
+         <xsd:complexType name="DT_CreditManagementAccountResponse">
+            <xsd:annotation>
+               <xsd:appinfo source="http://sap.com/xi/VersionID">
+               5f685051eac811ee94680000003a8cde
+               </xsd:appinfo>
+            </xsd:annotation>
+            <xsd:sequence>
+               <xsd:element name="CreditManagementAccount">
+                  <xsd:complexType>
+                     <xsd:sequence>
+                        <xsd:element name="DebtorPartyInternalID" type="xsd:string" minOccurs="0" />
+                        <xsd:element name="CreditsegmentInternalID" type="xsd:string" minOccurs="0" />
+                        <xsd:element name="CreditSegmentDescription" type="xsd:string" minOccurs="0" />
+                        <xsd:element name="CreditWorthinessCheckingRuleCode" type="xsd:string" minOccurs="0" />
+                        <xsd:element name="CreditWorthinessCheckingSchemeCode" type="xsd:string" minOccurs="0" />
+                        <xsd:element name="SpecialAttentionRequiredIndicator" type="xsd:string" minOccurs="0" />
+                        <xsd:element name="BlockedIndicator" type="xsd:string" minOccurs="0" />
+                        <xsd:element name="BlockingReasonCode" type="xsd:string" minOccurs="0" />
+                        <xsd:element name="BlockingReasonCodeDescription" type="xsd:string" minOccurs="0" />
+                        <xsd:element name="CreditLimitAmount" type="xsd:string" minOccurs="0" />
+                        <xsd:element name="CreditLimitValidityPeriod" type="xsd:string" minOccurs="0" />
+                        <xsd:element name="CreditExposure" type="xsd:string" minOccurs="0" />
+                        <xsd:element name="CreditRating" type="xsd:string" minOccurs="0" />
+                        <xsd:element name="CreditRiskClass" type="xsd:string" minOccurs="0" />
+                        <xsd:element name="PaymentBehaviourSummary" type="xsd:string" minOccurs="0" />
+                        <xsd:element name="CommitmentTotal" type="xsd:string" minOccurs="0" />
+                     </xsd:sequence>
+                  </xsd:complexType>
+               </xsd:element>
+               <xsd:element name="Log" minOccurs="0">
+                  <xsd:complexType>
+                     <xsd:sequence>
+                        <xsd:element name="MaximumLongItemSeverityCode" type="xsd:string" minOccurs="0" />
+                        <xsd:element name="Item" minOccurs="0" maxOccurs="unbounded">
+                           <xsd:complexType>
+                              <xsd:sequence>
+                                 <xsd:element name="TypeID" type="xsd:string" minOccurs="0" />
+                                 <xsd:element name="SeverityCode" type="xsd:string" minOccurs="0" />
+                                 <xsd:element name="Note" type="xsd:string" minOccurs="0" />
+                              </xsd:sequence>
+                           </xsd:complexType>
+                        </xsd:element>
+                     </xsd:sequence>
+                  </xsd:complexType>
+               </xsd:element>
+            </xsd:sequence>
+         </xsd:complexType>
+         <xsd:complexType name="DT_CreditManagementAccountRequest">
+            <xsd:annotation>
+               <xsd:appinfo source="http://sap.com/xi/VersionID">
+               4fe789b2eac811ee911b0000003a8cde
+               </xsd:appinfo>
+            </xsd:annotation>
+            <xsd:sequence>
+               <xsd:element name="DebtorPartyInternalID" type="xsd:string" minOccurs="0" />
+               <xsd:element name="CreditsegmentInternalID" type="xsd:string" minOccurs="0" />
+            </xsd:sequence>
+         </xsd:complexType>
+      </xsd:schema>
+   </wsdl:types>
+   <wsdl:message name="MT_CreditManagementAccountRequest">
+      <wsdl:documentation />
+      <wsdl:part name="MT_CreditManagementAccountRequest" element="p1:MT_CreditManagementAccountRequest" />
+   </wsdl:message>
+   <wsdl:message name="MT_CreditManagementAccountResponse">
+      <wsdl:documentation />
+      <wsdl:part name="MT_CreditManagementAccountResponse" element="p1:MT_CreditManagementAccountResponse" />
+   </wsdl:message>
+   <wsdl:portType name="SI_CreditManagementAccountRead_Outbound">
+      <wsdl:documentation />
+      <wsdl:operation name="SI_CreditManagementAccountRead_Outbound">
+         <wsdl:documentation />
+         <wsp:Policy>
+            <wsp:PolicyReference URI="#OP_SI_CreditManagementAccountRead_Outbound" />
+         </wsp:Policy>
+         <wsdl:input message="p1:MT_CreditManagementAccountRequest" />
+         <wsdl:output message="p1:MT_CreditManagementAccountResponse" />
+      </wsdl:operation>
+   </wsdl:portType>
+   <wsdl:binding name="SI_CreditManagementAccountRead_OutboundBinding" type="p1:SI_CreditManagementAccountRead_Outbound">
+      <soap:binding xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+      <wsdl:operation name="SI_CreditManagementAccountRead_Outbound">
+         <soap:operation xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="http://sap.com/xi/WebService/soap1.1" />
+         <wsdl:input>
+            <soap:body xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <soap:body xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+   </wsdl:binding>
+   <wsdl:service name="SI_CreditManagementAccountRead_OutboundService">
+      <wsdl:port name="HTTP_Port" binding="p1:SI_CreditManagementAccountRead_OutboundBinding">
+         <soap:address xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" location="http://vhcalj2eci:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=PIT_Sender&amp;receiverParty=&amp;receiverService=&amp;interface=SI_CreditManagementAccountRead_Outbound&amp;interfaceNamespace=http%3A%2F%2Fdemo.sap.com%2Fcm" />
+      </wsdl:port>
+      <wsdl:port name="HTTPS_Port" binding="p1:SI_CreditManagementAccountRead_OutboundBinding">
+         <soap:address xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" location="https://vhcalj2eci:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=PIT_Sender&amp;receiverParty=&amp;receiverService=&amp;interface=SI_CreditManagementAccountRead_Outbound&amp;interfaceNamespace=http%3A%2F%2Fdemo.sap.com%2Fcm" />
+      </wsdl:port>
+   </wsdl:service>
+</wsdl:definitions>
