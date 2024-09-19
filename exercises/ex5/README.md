@@ -96,3 +96,43 @@ Next, Click on the 'Authentication' step. Verify that the 'Client Certificate' a
 
 
 ## Test the API
+![](/exercises/ex5/images/ex5_1_1.png)
+
+![](/exercises/ex5/images/ex5_1_2.png)
+
+![](/exercises/ex5/images/ex5_1_3.png)
+
+![](/exercises/ex5/images/ex5_1_4.png)
+
+![](/exercises/ex5/images/tenantbooker_1.png)
+
+![](/exercises/ex5/images/ex5_1_5.png)
+
+![](/exercises/ex5/images/ex5_1_6.png)
+
+![](/exercises/ex5/images/ex5_1_7.png)
+
+![](/exercises/ex5/images/ex5_1_8.png)
+
+![](/exercises/ex5/images/ex5_1_9.png)
+
+![](/exercises/ex5/images/ex5_1_10.png)
+
+![](/exercises/ex5/images/ex5_1_11.png)
+
+![](/exercises/ex5/images/ex5_1_12.png)
+
+![](/exercises/ex5/images/tenantbooker_2.png)
+
+![](/exercises/ex5/images/ex5_1_13.png)
+
+![](/exercises/ex5/images/ex5_1_14.png)
+
+![](/exercises/ex5/images/ex5_1_15.png)
+
+![](/exercises/ex5/images/ex5_1_16.png)
+
+![](/exercises/ex5/images/ex5_1_17.png)
+
+![](/exercises/ex5/images/ex5_1_18.png)
+
