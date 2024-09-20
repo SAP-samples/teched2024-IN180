@@ -4,7 +4,10 @@ In this exercise, we will deploy and manage an API Artefact to connect to a S/4H
 
 ## Identity the S/4HANA OData Service
 
-As a pre-requisite, we must first identify the S/4HANA OData service we want to expose and manage as an API Artefact. Luckily, we don't have to look too far and the standard BEP namespace in a S/4HANA system enables standard content that we can use out of the box. 
+As a prerequisite, we must first identify the S/4HANA OData service we want to expose and manage as an API Artefact. Luckily, we don't have to look too far and the standard BEP namespace in a S/4HANA system enables standard content that we can use out of the box. 
+> [!NOTE]
+> Access to an onpremise S/4HANA system has not been provided as part of this TechEd exercise. The screenshot here is just for your information. 
+> 
 As seen in the screenshot, we will use the standard GWSAMPLE_BASIC Service. You can see that the Service is in an Activated state.
 ![](/exercises/ex5/images/ex5_0.png)
 
