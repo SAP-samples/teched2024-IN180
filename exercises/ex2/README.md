@@ -1,4 +1,4 @@
-# Exercise 1 - SAP Process Integration walkthrough
+# Exercise 2 - SAP Process Integration walkthrough
 
 In this exercise, you will
 
@@ -41,6 +41,21 @@ Let us launch the start page of the Java instance (J2E), the entry point for us 
 
 <br>![](/exercises/ex2/images/ex2_13.png)
 
+## Testing the Web Service Interface
+Let us now look at ways to test the Interface. Given that this is a SOAP Service, we will use SoapUI (https://www.soapui.org/downloads/soapui/), the open source tool to test the interface. You may use any other tool (e.g. Postman)of your choice.
+<br>![](/exercises/ex2/images/ex2_15.png)
+
+<br>![](/exercises/ex2/images/ex2_16.png)
+
+<br>![](/exercises/ex2/images/ex2_17.png)
+
+<br>![](/exercises/ex2/images/ex2_18.png)
+
+<br>![](/exercises/ex2/images/ex2_19.png)
+
+<br>![](/exercises/ex2/images/ex2_20.png)
+
+<br>![](/exercises/ex2/images/ex2_22.png)
 
 
 
@@ -48,5 +63,5 @@ Let us launch the start page of the Java instance (J2E), the entry point for us 
 
 You've now ...
 
-Continue to - [Exercise 2 - Exercise 2 Description](../ex2/README.md)
+Continue to - [Exercise 3 - Migration Assessment](../ex3/README.md)
 

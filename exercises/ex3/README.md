@@ -1,4 +1,4 @@
-# Exercise 2 - Migration Assessment
+# Exercise 3 - Migration Assessment
 
 In this exercise, you will learn how to migrate your existing integration scenarios to SAP Integration Suite with the Migration Assessment capability of SAP Integration Suite. This offering helps you estimate the technical efforts involved in the migration process and evaluates how various integration scenarios might be migrated. Once you've extracted your integration scenarios and executed a scenario evaluation, you can find the modernization recommendations in the downloadable reports and the dashboard.
 
@@ -133,4 +133,4 @@ Furthermore, you have the option to download details about the latest evaluation
 
 You've now ...
 
-Continue to - [Exercise 3 - Excercise 3 ](../ex3/README.md)
+Continue to - [Exercise 4 - Migrate and test a simple SOAP to SOAP scenario ](../ex4/README.md)

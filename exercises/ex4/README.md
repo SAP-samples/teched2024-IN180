@@ -204,4 +204,4 @@ Having completed these steps, you are now ready to test the interface. To do thi
 
 Congratulations. You have successfully migrated and tested your scenario now.
 
-Continue to - [Exercise 3 - Migrate and test a SOAP to REST scenario](../ex3/README.md)
+Continue to - [Exercise 5 - Deploy an API Artefact to connect to an S/4HANA OData Service](../ex5/README.md)
