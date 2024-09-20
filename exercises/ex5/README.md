@@ -45,7 +45,7 @@ Enter the following values as inputs for the 'API Details'.
 | API Version | 1.0 |
 | Runtime Profile (select from dropdown) | Edge Integration Cell - s4hana-onpremise-node |
 
-![](/exercises/ex5/images/ex5_5.png)
+<br>![](/exercises/ex5/images/ex5_5.png)
 
 Once the API is created, you will be taken to the 'Overview' tab. Verify your inputs and head over to the 'Resources' tab.
 ![](/exercises/ex5/images/ex5_6.png)
@@ -77,11 +77,15 @@ Next, Click on the 'Authentication' step. Verify that the 'Client Certificate' a
 >
 ![](/exercises/ex5/images/ex5_13.png)
 
+Look for 'Authorization' policy in the 'search and Add a Step' text area. In the next set of steps, we will add the policies to manage the behavior of the API.
 ![](/exercises/ex5/images/ex5_14.png)
 
 ## Add policies to manage the API Artefact
 
+Drag and add the 'Authorization' policy step after the 'Authentication' step and before the 'Request-Reply' step. In the 'Scope' region within the Policy Settings sub-tab, add a scope called `APIArtifactUser`
 ![](/exercises/ex5/images/ex5_15.png)
+
+At this point, note that we have already created a User Role with the 'APIArtifactUser' name within the Tenant Administration settings page. 
 
 ![](/exercises/ex5/images/ex5_16.png)
 
