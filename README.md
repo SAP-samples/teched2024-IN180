@@ -7,13 +7,14 @@ In this session, you will deep-dive into the solution components of SAP Integrat
 
 ## Overview
 
-Customers are looking at elevating and migrating their mature production-grade deployments of SAP Process Integration and Process Orchestration to SAP Integration Suite. This session will introduce you to simple ways of achieving so.<br><br>
+Customers want to elevate and migrate their mature production-grade SAP Process Integration and Process Orchestration deployments to SAP Integration Suite. This session will introduce you to simple ways of achieving so.<br><br>
 We first look at a SAP Process Integration (PI) landscape with a simple Integrated Configuration object (ICO) representing a Web Service-based Integration pattern to an OnPremise S/4HANA System. <br><br>
 We then dive into migration assessment to assess the technical efforts involved in the migration process and evaluate how various integration scenarios might be migrated. After having finished the assessment of the current SAP Process Integration landscape and having estimated the effort needed to migrate with the Interface Migration Assessment capability, the next step is the actual migration. The goal of the migration tool is to provide a semi-automated migration where interfaces in SAP Cloud Integration will be automatically created based on SAP Process Integration information so that ideally 60-70% of technical migration efforts are automated. The migration of scenarios is based on a pattern approach, which means that integration flow patterns are used as a skeleton to migrate the content and create the final integration flows, and maximize reusability.<br><br>
 We then look at Edge Integration Cell, the next-generation hybrid integration runtime offered with SAP Integration Suite as a deployment vehicle for the migrated content. Our principal goal is to demonstrate a 'Ground to Ground' integration pattern. We achieve this by putting the Edge Integration Cell runtime, the SAP PI system, and S/4HANA System in the same network zone as opposed to opening everything to the Internet.<br><br>
-We finally look at deployment and managing an API Artefact, keeping the motivations for an API-centric integration in mind.  
+In the leg of the exercise, we look at deployment and managing an API Artifact as a proxy to S/4HANA OData Service, keeping the motivations for an API-centric integration in mind.  
 
 ## Pre-requisites
+
 There are no prerequisites for this hands-on session. You can perform it even if you do not have any experience with integration solutions. However, you will be able to derive a lot of value from it if you have some knowledge of what SAP Integration Suite is all about and how it helps with enterprise-wide integration needs.
 Here is a mission that can help you get started with SAP Integration Suite:
 
@@ -29,17 +30,12 @@ The requirements to follow the exercises in this repository are...
 Provide the exercise content here directly in README.md using [markdown](https://guides.github.com/features/mastering-markdown/) and linking to the specific exercise pages, below is an example.
 
 - [Getting Started](exercises/ex0/)
-- [Exercise 1 - First Exercise Description](exercises/ex1/)
-    - [Exercise 1.1 - Exercise 1 Sub Exercise 1 Description](exercises/ex1#exercise-11-sub-exercise-1-description)
-    - [Exercise 1.2 - Exercise 1 Sub Exercise 2 Description](exercises/ex1#exercise-12-sub-exercise-2-description)
-- [Exercise 2 - Second Exercise Description](exercises/ex2/)
-    - [Exercise 2.1 - Exercise 2 Sub Exercise 1 Description](exercises/ex2#exercise-21-sub-exercise-1-description)
-    - [Exercise 2.2 - Exercise 2 Sub Exercise 2 Description](exercises/ex2#exercise-22-sub-exercise-2-description)
+- [Exercise 1 - Access and explore SAP Integration Suite](exercises/ex1/)
+- [Exercise 2 - SAP Process Integration Walkthrough](exercises/ex2/)
+- [Exercise 3 - Migration Assessment](exercises/ex3/)
+- [Exercise 4 - Migrate and test a simple SOAP to SOAP scenario](exercises/ex4/)
+- [Exercise 5 - Deploy an API Artefact to connect to a S/4HANA OData Service](exercises/ex5/)
 
-  
-**OR** Link to the Tutorial Navigator for example...
-
-Start the exercises [here](https://developers.sap.com/tutorials/abap-environment-trial-onboarding.html).
 
 **IMPORTANT**
 
