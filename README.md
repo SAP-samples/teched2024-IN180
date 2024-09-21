@@ -15,10 +15,12 @@ In the leg of the exercise, we look at deployment and managing an API Artifact a
 
 ## Pre-requisites
 
-There are no prerequisites for this hands-on session. You can perform it even if you do not have any experience with integration solutions. However, you will be able to derive a lot of value from it if you have some knowledge of what SAP Integration Suite is all about and how it helps with enterprise-wide integration needs.
+There are no functional prerequisites for this hands-on session. You can perform it even if you do not have any experience with integration solutions. However, you will be able to derive a lot of value from it if you have some knowledge of what SAP Integration Suite is all about and how it helps with enterprise-wide integration needs.
 Here is a mission that can help you get started with SAP Integration Suite:
 
 • [Get Started with Integration Suite!](https://discovery-center.cloud.sap/protected/index.html#/missiondetail/3258/3327/)
+
+You will need a user account (S/P/I/D/C User) that authenticates to SAP Cloud Identity Service
 
 
 ## Requirements
