@@ -12,11 +12,10 @@ To begin, let us initiate an RDP connection to a Windows virtual machine that le
 ## Connect to the Integration Directory
 Let us launch the start page of the Java instance (J2E), the entry point for us to get into the Process Integration tools. Click on Integration Builder to staring building an ICO in the Integration Directory section.
 ![](/exercises/ex2/images/ex2_1.png)
-<br> This launches a swing client. Login to the server by supplying 
-
-<br>![](/exercises/ex2/images/ex2_2.png)
-
-<br>![](/exercises/ex2/images/ex2_3.png)
+<br> This launches a Java Swing client. Login to the server by supplying the user credentials to access the server
+![](/exercises/ex2/images/ex2_2.png)
+<br>Expand the Integration Configuration section. Look for `SI_CreditManagementAccountRead_Outbound` as our reference service interface 
+![](/exercises/ex2/images/ex2_3.png)
 
 <br>![](/exercises/ex2/images/ex2_4.png)
 
