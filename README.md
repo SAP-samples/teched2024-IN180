@@ -24,10 +24,10 @@ You will need a user account (S/P/I/D/C User) that authenticates to SAP Cloud Id
 
 • [https://techedtenantbookerapplication-ad5b9d48b.dispatcher.hana.ondemand.com/index.html](https://techedtenantbookerapplication-ad5b9d48b.dispatcher.hana.ondemand.com/index.html)
 
-
-## Requirements
-
-The requirements to follow the exercises in this repository are...
+> [!NOTE]
+> You will not be able to use your existing SAP BTP Trial Account or the BTP Free Tier Account to run this exercise as we need connections to an existing SAP Process Orchestration system and an instance of Edge Integration Cell.
+> 
+In case you do not have an existing user account (S/P/I/D/C User), follow the steps in the [Prerequisite](exercises/prerequisites/) exercise to create a user account.
 
 ## Exercises
 
