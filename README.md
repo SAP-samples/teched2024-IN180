@@ -24,6 +24,8 @@ You will need a user account (S/P/I/D/C User) that authenticates to SAP Cloud Id
 
 • [https://techedtenantbookerapplication-ad5b9d48b.dispatcher.hana.ondemand.com/index.html](https://techedtenantbookerapplication-ad5b9d48b.dispatcher.hana.ondemand.com/index.html)
 
+Follow the steps described [here](https://github.com/SAP-samples/teched2024-IN180/tree/main/exercises/prerequisites#getting-into-tenant-booker-app-and-accessing-sap-integration-suite-tenant) for a guided procedure.
+
 > [!NOTE]
 > You will not be able to use your existing SAP BTP Trial Account or the BTP Free Tier Account to run this exercise as we need connections to an existing SAP Process Orchestration system and an instance of Edge Integration Cell.
 > 
