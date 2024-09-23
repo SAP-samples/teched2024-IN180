@@ -20,7 +20,9 @@ Here is a mission that can help you get started with SAP Integration Suite:
 
 • [Get Started with Integration Suite!](https://discovery-center.cloud.sap/protected/index.html#/missiondetail/3258/3327/)
 
-You will need a user account (S/P/I/D/C User) that authenticates to SAP Cloud Identity Service
+You will need a user account (S/P/I/D/C User) that authenticates to SAP Cloud Identity Service to log in to the SAP Integration Suite sandbox Account set up for you. Once you have the user account handy log in to the Tenant Booker App by opening the URL listed below and book your tenant. This will give you access to one of the tenants that has been provisioned for this hands-on exercise.
+
+• [https://techedtenantbookerapplication-ad5b9d48b.dispatcher.hana.ondemand.com/index.html](https://techedtenantbookerapplication-ad5b9d48b.dispatcher.hana.ondemand.com/index.html)
 
 
 ## Requirements
