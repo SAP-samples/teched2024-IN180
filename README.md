@@ -26,6 +26,8 @@ You will need a user account (S/P/I/D/C User) that authenticates to SAP Cloud Id
 
 Follow the steps described [here](https://github.com/SAP-samples/teched2024-IN180/tree/main/exercises/prerequisites#getting-into-tenant-booker-app-and-accessing-sap-integration-suite-tenant) for a guided procedure.
 
+You will also need a testing tool installed on your local machine to connect to the IFlows and API. In this hands-on, we will be referencing screenshots executed in [Bruno](https://www.usebruno.com/) as the testing client. You are free to use any tool of your choice, e,g, Postman, Insomnia, SOAPUI etc. 
+
 > [!NOTE]
 > You will not be able to use your existing SAP BTP Trial Account or the BTP Free Tier Account to run this exercise as we need connections to an existing SAP Process Orchestration system and an instance of Edge Integration Cell.
 > 
