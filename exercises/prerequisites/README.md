@@ -14,6 +14,7 @@ Point your browser to [https://community.sap.com](https://community.sap.com). We
 <br>Fill in your user details. This will correspond to your P-User credentials.
 > [!NOTE]
 > This step needs an email address to be presented. Make sure the email address you present is not linked with an existing S-User.
+
 ![](/exercises/prerequisites/images/prereq_9.png)
 
 <br>Complete the email verification step.
