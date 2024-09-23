@@ -31,11 +31,17 @@ Point your browser to [https://community.sap.com](https://community.sap.com). We
 Next, open the Tenant Booker Application by pointing your browser to [https://techedtenantbookerapplication-ad5b9d48b.dispatcher.hana.ondemand.com/index.html](https://techedtenantbookerapplication-ad5b9d48b.dispatcher.hana.ondemand.com/index.html). Sign in with the P-User details just created, if required. Click on the 'Book Tenant' button.
 ![](/exercises/prerequisites/images/prereq_5.png)
 
-<br>You will be presented with a Password and a bunch of credentials. Carefully note this. You will require these credentials later in the exercises. 
+<br>You will be presented with a Password and a bunch of credentials. Carefully note these. You will need these credentials later in the exercises. Click on the Tenant URL for SAP Integration Suite.
 ![](/exercises/prerequisites/images/prereq_4.png)
 
-<br>![](/exercises/prerequisites/images/prereq_3.png)
+<br>IMP: Make sure to sign-in with the `cpi-idp.accounts.ondemand.com` identity provider and not the `Default Identity Provider`. 
+![](/exercises/prerequisites/images/prereq_3.png)
 
-<br>![](/exercises/prerequisites/images/prereq_2.png)
+<br>Enter the User ID and Password credentials from the Tenant Booker App.
+> [!NOTE]
+> Do not enter the credentials of your P/S/I/D/C user!
 
-<br>![](/exercises/prerequisites/images/prereq_1.png)
+![](/exercises/prerequisites/images/prereq_2.png)
+
+<br>Congratulations, you are successfully logged into the SAP Integration Suite tenant. You can continue with the rest of the exercises.
+![](/exercises/prerequisites/images/prereq_1.png)
