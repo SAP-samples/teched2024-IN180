@@ -3,10 +3,10 @@
 In this exercise, you will
 
 - take a virtual walkthrough of a SAP Process Integration system and look at an ICO (Integration Configuration Object) definition of an interface that exposes a simple SOAP-to-SOAP Integration.
-- note that there is no hands-on for this exercise as there are logistical challenges in enabling each participant to access an onpremise system, hence we have decided to enable a virtual walkthrough by looking at screenshots alone.
+- note that there is no hands-on for this exercise as there are logistical challenges in enabling each participant to access an onpremise system, so we have decided to enable a virtual walkthrough by looking at screenshots alone.
 
 ## Access a virtual machine (or a physical server) connected to the SAP Process Integration instance
-To begin, let us log into a windows virtual machine that let's us access the server that runs the SAP Process Integration Java Server. <br> Here we are using SAP Cloud Appliance Library (SAP Cal) https://cal.sap.com/ to install and manage an instance of SAP Process Integration 7.5 SP28. 
+To begin, let us initiate an RDP connection to a Windows virtual machine that lets us connect to the SAP Process Integration Java Server. <br> Here we are using SAP Cloud Appliance Library (SAP Cal) https://cal.sap.com/ to install and manage an instance of SAP Process Integration 7.5 SP28. 
 ![](/exercises/ex2/images/ex2_14.png)
 
 ## Connect to the Integration Directory
