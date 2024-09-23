@@ -35,7 +35,8 @@ In case you do not have an existing user account (S/P/I/D/C User), follow the st
 
 Provide the exercise content here directly in README.md using [markdown](https://guides.github.com/features/mastering-markdown/) and linking to the specific exercise pages, below is an example.
 
-- [Getting Started](exercises/ex0/)
+- [Prerequisite - Access the Tenant Booker app](exercises/prerequisites/)
+- [Getting Started - An overview of SAP Integration Suite](exercises/ex0/)
 - [Exercise 1 - Access and explore SAP Integration Suite](exercises/ex1/)
 - [Exercise 2 - SAP Process Integration Walkthrough](exercises/ex2/)
 - [Exercise 3 - Migration Assessment](exercises/ex3/)
