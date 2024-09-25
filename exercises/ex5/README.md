@@ -56,7 +56,7 @@ Take a moment to familiarize yourself with the auto-generated Swagger UI / Open 
 ## Configure the API Artefact
 Now that the API is created, in this section we will configure the properties.
 
-Double-click anywhere on the API edition screen to launch the property editor sheet.
+Double-click anywhere on the API edition screen to launch the policy editor sheet.
 ![](/exercises/ex5/images/ex5_8.png)
 
 Verify that the property editor screen shows up.
