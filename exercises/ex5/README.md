@@ -143,3 +143,9 @@ At this point, note that we have already created a User Role with the 'APIArtifa
 
 ![](/exercises/ex5/images/ex5_1_18.png)
 
+## Summary
+
+Congratulations! You have successfully completed the Exercise **Deploy an API Artefact to connect to an S/4HANA Odata.**
+
+Many congratulations for participating and completing the Teched Jumpstart session **IN180 - Future-proof your SAP PI/PO investments with SAP Integration Suite.** 
+
