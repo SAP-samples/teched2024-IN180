@@ -60,7 +60,8 @@ Let us now look at ways to test the Interface. Given that this is a SOAP Service
 
 ## Summary
 
-You've now ...
+Congratulations! You have successfully completed the Exercise **SAP Process Integration walkthrough**
 
-Continue to - [Exercise 3 - Migration Assessment](../ex3/README.md)
+Now that you have taken a virtual walkthrough of a SAP Process Integration system and looked at an ICO (Integration Configuration Object) definition of an interface that exposes a simple SOAP-to-SOAP Integration you can move to [Exercise 3](../ex3/README.md) **Migration Assessment**
+
 
