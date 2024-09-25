@@ -34,4 +34,4 @@ Key Highlights:
 
 Congratulations! You have successfully completed the Exercise **An Overview of SAP Integration Suite**!
 
-Now that you have an Overview of the SAP Integration Suite and Edge Integration Cell, you can move to [Exercise 1](../ex1/README.md) **Access and explore the SAP Integration Suite**
+Now that you have an Overview of the SAP Integration Suite and Edge Integration Cell, you can move to [Exercise1 - Access and explore the SAP Integration Suite](../ex1/README.md)
