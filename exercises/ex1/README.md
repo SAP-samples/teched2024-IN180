@@ -90,6 +90,6 @@ If you have Tenant Admin role assigned, you will be able to access Settings. Her
 
 Congratulations! You have successfully completed the Exercise **Access and explore the SAP Integration Suite.**
 
-Now that you have explored the different capabilities and navigations of SAP Integration Suite tooling you can move to [Exercise 2](../ex2/README.md) SAP Process Integration walkthrough
+Now that you have explored the different capabilities and navigations of SAP Integration Suite tooling you can move to [Exercise2 - SAP Process Integration walkthrough](../ex2/README.md)
 
 
