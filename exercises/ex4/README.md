@@ -166,7 +166,7 @@ Having completed these steps, you are now ready to test the interface. To do thi
 
 <br>![image](/exercises/ex4/images/Response.png)  
 
-10. This message will also show up in the message monitoring of SAP Integration Suite. Navigate back to the **"Integrations and APIs"** monitoring page of SAP Integration Suite. Make sure to select **Edge Integration Cell** as the Monitoring Runtime. **Press** the **All Artifacts** tile below "Monitor Message Processing".
+10. This message will also show up in the message monitoring of SAP Integration Suite. Navigate back to the **"Integrations and APIs"** monitoring page of SAP Integration Suite. Make sure to select **Edge Integration Cell** as the Monitoring Runtime. **Press** the "**All Artifacts**" tile below "Monitor Message Processing".
 
 <br>![image](/exercises/ex4/images/MessageMonitor.png)
 
