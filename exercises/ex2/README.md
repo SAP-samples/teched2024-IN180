@@ -12,16 +12,22 @@ To begin, let us initiate an RDP connection to a Windows virtual machine that le
 ## Connect to the Integration Directory
 Let us launch the start page of the Java instance (J2E), the entry point for us to get into the Process Integration tools. Click on Integration Builder to staring building an ICO in the Integration Directory section.
 ![](/exercises/ex2/images/ex2_1.png)
+
 <br> This launches a Java Swing client. Login to the server by supplying the user credentials to access the server
 ![](/exercises/ex2/images/ex2_2.png)
+
 <br>Expand the Integration Configuration section. Look for `SI_CreditManagementAccountRead_Outbound` as our reference service interface 
 ![](/exercises/ex2/images/ex2_3.png)
+
 <br>Pay attention to the 'Inbound Processing' sub-tab. Let us double-click into the `SOAP_Sender_CM` Communication Channel.
 ![](/exercises/ex2/images/ex2_4.png)
+
 <br>Notice that the channel has been exposed as a 'SOAP' Adapter type.
 ![](/exercises/ex2/images/ex2_5.png)
+
 <br>Head back to the ICO definition and click on the 'Outbound Processing' sub-tab. Double-click into the `SOAP_Receiver_CM` Communication Channel.
 ![](/exercises/ex2/images/ex2_6.png)
+
 <br>Notice that this channel has also been exposed as a 'SOAP' Adapter type. In the 'General' tab, you will see that the target URL has been set to the Credit Management Web Service `https://vhcals4hci.dummy.nodomain:44300/sap/opu/odata/IWBEP/GWSAMPLE_BASIC/` to get the credit ratings information for a business partner. 
 to learn 
 ![](/exercises/ex2/images/ex2_7.png)
