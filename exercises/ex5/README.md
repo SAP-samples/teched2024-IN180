@@ -88,7 +88,7 @@ Drag and add the 'Authorization' policy step after the 'Authentication' step and
 At this point, note that we have already created a User Role with the 'APIArtifactUser' name within the Tenant Administration settings page. 
 ![](/exercises/ex5/images/ex5_16.png)
 
-Select the quota policy, and under Policy Settings, fill in the details shown in the screenshot below. Enter quota identifier as `${request.header['X-Forwarded-For']}`
+Select the quota policy, and under Policy Settings, fill in the details shown in the screenshot below. Enter Quota Identifier as `${request.header['X-Forwarded-For']}`
 ![](/exercises/ex5/images/ex5_17.png)
 
 Save the Iflow.
@@ -103,7 +103,7 @@ Select Yes on the confirmation dialog.
 Status of the artifact should be  STARTED
 ![](/exercises/ex5/images/ex5_21.png)
 
-Navigate back to the Monitor -> Integrations and APIs. Select **Manage Integration Content** tile and then Select Runtime as **Edge Integration Cell** Your deployed Integration flow should be in started state. Copy the API Endpoint URL.
+Navigate back to the Monitor -> Integrations and APIs. Select **Manage Integration Content** tile and then Select Runtime as **Edge Integration Cell**. Your deployed Integration flow should be in started state. Copy the API Endpoint URL.
 ![](/exercises/ex5/images/ex5_22.png)
 
 
