@@ -1,34 +1,24 @@
-# Exercise 1 - Access and explore SAP Integration Suite
+# Exercise 1 - Access and explore the SAP Integration Suite
 
 In this exercise, you will
 
-- get access to an SAP Integration Suite tenant,
+- get familiar with the landing page of the SAP Integration Suite UI 
 - get introduced to different capabilities and explore navigation across different aspects of SAP Integration Suite tooling.
-
-## Access SAP Integration Suite tenant
-
-For running through the exercise steps, you will need access to SAP Integration Suite tenant. Please pick one of these SAP Integration Suite tenant as per the assignment . You will also get the credentials to log in to these tenants from the instructors.
-
-1. Please use this SAP Integration Suite tenant for your exercises
-
-2. Use the username and password shared by the instructors to login to the tenant assigned to you
-
-3. For Exercise 3 and Exercise 4, please use these Service Instance Credentials
 
 
 ## Explore SAP Integration Suite tooling
 
-Log in to SAP Integration Suite tenant using the credentials provided to you by the instructors. Now let´s explore the different capabilities and navigations of SAP Integration Suite tooling <br>
+Log in to the SAP Integration Suite tenant using the credentials from the tenant booker app. Now let´s explore the different capabilities and navigations of SAP Integration Suite tooling <br>
 
-**Home** is the first screen that you will land upon logging in to SAP Integration Suite. Click on the three lines icon in the top left corner to expand the navigation menu items. <br>
+**Home** is the first screen that you will land upon logging in to SAP Integration Suite. Click on the three-line icon (also called the _hamburger_ icon) in the top left corner to expand the navigation menu items. <br>
 
 ![](/exercises/ex1/images/ex1_1.png)
 
-The first section is the **Recent** Activities & **Monitoring**, which gives you a snapshot of what´s going on with the SAP Integration Suite tenant. It lists the artifacts that were worked upon and also the monitoring status of the deployed artifacts. You can navigate to them directly from here. <br>
+The first section of interest within the Home region is the **Recent** Activities & **Monitoring**, which gives you a snapshot of what´s going on with the SAP Integration Suite tenant. It lists the artifacts that you/ other users have recently worked on and also the monitoring status of the deployed artifacts. You can navigate to them directly from here. <br>
 
 ![](/exercises/ex1/images/ex1_2.png)
 
-Then you will see the list of **Capabilities** that are activated in this tenant. SAP Integration Suite provides many different capabilities like Cloud Integration, API Management, Integration Advisor, Trading Partner Management, Open Connectors, Integration Assessment, and Migration Assessment, to address all your integration requirements. <br>
+Then you will see the list of **Capabilities** that are activated in this tenant. SAP Integration Suite provides many different capabilities like Cloud Integration, API Management, Integration Advisor, Trading Partner Management, Open Connectors, Integration Assessment, and Migration Assessment to address all your integration requirements. <br>
 
 ![](/exercises/ex1/images/ex1_3.png)
 
@@ -38,11 +28,9 @@ Last section of the Home page is the **Resources** segment, where links to docum
 ![](/exercises/ex1/images/ex1_4.png)
 
 
-
-Now if you look at the different navigation sections on the left, after Home, you will see **Discover**, which is a repository of all standard pre-built content (integrations, APIs and type systems) shipped by SAP. Based on your specific integration need, you can explore, search and copy them to your Design workspace to kick-start your integration development. <br><br>
+Now if you look at the different navigation sections on the left, after Home, you will see **Discover**, which opens up a repository of all standard pre-built content (integrations, APIs and type systems) shipped by SAP. Based on your specific integration need, you can explore, search and copy them to your Design workspace to kick-start your integration development. <br><br>
 
 ![](/exercises/ex1/images/ex1_5.png)
-
 
 
 **Design** is your local workspace where you can design and configure integrations, APIs, message implementation guidelines, mapping guidelines, scripts and other integration artifacts. <br><br>
@@ -67,7 +55,7 @@ In the **Monitor** section, you can check the deployment status, look at message
 ![](/exercises/ex1/images/ex1_9.png)
 
 
-The **Analyze** section gives you useful pre-build analytical charts and dashboards for an API Administrator and Business personnel to gauge the health, engagement and operational insights.
+The **Analyze** section gives you useful pre-built analytical charts and dashboards for an API Administrator and Business personnel to gauge the health, engagement and operational insights of the deployed APIs.
 
 ![](/exercises/ex1/images/ex1_10.png)
 
@@ -82,7 +70,7 @@ You can use **Monetize** to define rate plans for the API Products that you buil
 
 
 
-If you have Tenant Admin role assigned, you will be able to access **Settings**. Here you can configure settings which are applicable for the entire tenant like managing runtime profiles, configuring transport management, setting up API Management, customization of MIGs & MAGs, etc. <br><br>
+If you have a Tenant Admin role assigned, you will be able to access **Settings**. Here you can configure settings that are applicable for the entire tenant like managing runtime profiles, configuring transport management, setting up API Management, customization of MIGs & MAGs, etc. <br><br>
 
 ![](/exercises/ex1/images/ex1_13.png)
 
