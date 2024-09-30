@@ -154,51 +154,26 @@ Having completed these steps, you are now ready to test the interface. To do thi
 <br>![image](/exercises/ex4/images/Auth_Booker.png) 
 
 
-4. <b>Paste the endpoint</b> from you integration flow as URL.  
+8. The response contains the Access Token. **Copy** the **"access_token"** value to the clipboard as this is required in the next step for authentication.
 
-<br>![image](/exercises/ex4/images/Insomnia-4.png)  
+<br>![image](/exercises/ex4/images/OAuthToken.png) 
 
-5. Add a <b>Body</b> of type XML.
+9. Change the Auth Type to **"Bearer"** and insert the token from the response. Press the **"Arrow"** on the top right to send the request to the Edge Integrtaion Cell instance.
 
-<br>![image](/exercises/ex4/images/Insomnia-5.png)  
+<br>![image](/exercises/ex4/images/BearerToken.png) 
 
-6. Provide following payload:
+10. The request should return HTTP code 200 and the Credit Management Details.
 
-```xml
-<soapenv:Envelope
-    xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
-    xmlns:pi="http://pi-elevation.bootcamp.com">
-    <soapenv:Header />
-    <soapenv:Body>
-        <pi:MT_NumberConversion_REQ>
-            <number>1389</number>
-        </pi:MT_NumberConversion_REQ>
-    </soapenv:Body>
-</soapenv:Envelope>
-```
+<br>![image](/exercises/ex4/images/Response.png)  
 
-<br>![image](/exercises/ex4/images/Insomnia-6.png)  
+10. This message will also show up in the message monitoring of SAP Integration Suite. Navigate back to the **"Integrations and APIs"** monitoring page of SAP Integration Suite. Make sure to select **Edge Integration Cell** as the Monitoring Runtime. **Press** the "**All Artifacts**" tile below "Monitor Message Processing".
 
-7. Switch to tab <b>Auth</b> and choose <b>Basic Auth</b>.
-
-<br>![image](/exercises/ex4/images/Insomnia-7.png)  
-
-8. Provide following credentials:<br>
+<br>![image](/exercises/ex4/images/MessageMonitor.png)
 
 
-<br>![image](/exercises/ex4/images/Insomnia-8.png)  
+11. In the message monitor filter for your Artifact by entering the UserID added as a suffix for your integration flow. Here you should see one new log in status **Completed**.
 
-9. Click <b>Send</b>. The request should return HTTP code 200 and a response with the converted text.
-
-<br>![image](/exercises/ex4/images/Insomnia-9.png)  
-
-10. Navigate back to the monitoring page, and click the **Monitor Message Processing** link below the **Artifact Details** of your deployed SOAP to SOAP integration flow.
-
-<br>![image](/exercises/ex4/images/Monitoring_Navigate_To_MPL.png)
-
-11. In the message monitor, you should see one new log in status **Completed**.
-
-<br>![image](/exercises/ex4/images/Monitoring_MPL_Completed.png)
+<br>![image](/exercises/ex4/images/MonitorMPL.png)
 
 ## Summary
 

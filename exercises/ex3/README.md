@@ -131,6 +131,7 @@ Furthermore, you have the option to download details about the latest evaluation
 
 ## Summary
 
-You've now ...
+Congratulations! You have successfully completed the Exercise **Migration Assessment.**
 
-Continue to - [Exercise 4 - Migrate and test a simple SOAP to SOAP scenario ](../ex4/README.md)
+Now that you have learned how to migrate your existing integration scenarios to SAP Integration Suite with the Migration Assessment capability of SAP Integration Suite you can move to [Exercise 4 - Migrate and test a simple SOAP to SOAP scenario ](../ex4/README.md) 
+

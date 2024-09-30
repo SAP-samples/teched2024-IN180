@@ -56,7 +56,7 @@ Take a moment to familiarize yourself with the auto-generated Swagger UI / Open 
 ## Configure the API Artefact
 Now that the API is created, in this section we will configure the properties.
 
-Double-click anywhere on the API edition screen to launch the property editor sheet.
+Double-click anywhere on the API edition screen to launch the policy editor sheet.
 ![](/exercises/ex5/images/ex5_8.png)
 
 Verify that the property editor screen shows up.
@@ -65,7 +65,7 @@ Verify that the property editor screen shows up.
 Notice that the system has added an ODATA2 Sender Adapter and an ODATA Reciever Adapter connecting the Client and the Target respectively. 
 ![](/exercises/ex5/images/ex5_10.png)
 
-Click on 'Edit' to start editing.
+Click on 'Edit' to start editing. Select the OData adapter on the receiver side.
 ![](/exercises/ex5/images/ex5_11.png)
 
 In the 'Connection' sub-pane, make sure you change the Authentication from 'None to 'Basic'. Enter `s4hanacredentials` as the value in the 'Credential Name' text box. You may verify subsequently that within the Security Material section, we have already created a Basic Authentication credential needed to access the S/4HANA OData Service. 
@@ -86,19 +86,24 @@ Drag and add the 'Authorization' policy step after the 'Authentication' step and
 ![](/exercises/ex5/images/ex5_15.png)
 
 At this point, note that we have already created a User Role with the 'APIArtifactUser' name within the Tenant Administration settings page. 
-
 ![](/exercises/ex5/images/ex5_16.png)
 
+Select the quota policy, and under Policy Settings, fill in the details shown in the screenshot below. Enter Quota Identifier as `${request.header['X-Forwarded-For']}`
 ![](/exercises/ex5/images/ex5_17.png)
 
+Save the Iflow.
 ![](/exercises/ex5/images/ex5_18.png)
 
+Click on the three dots from the top-hand right corner and select Deploy.
 ![](/exercises/ex5/images/ex5_19.png)
 
+Select Yes on the confirmation dialog.
 ![](/exercises/ex5/images/ex5_20.png)
 
+Status of the artifact should be  STARTED
 ![](/exercises/ex5/images/ex5_21.png)
 
+Navigate back to the Monitor -> Integrations and APIs. Select **Manage Integration Content** tile and then Select Runtime as **Edge Integration Cell**. Your deployed Integration flow should be in started state. Copy the API Endpoint URL.
 ![](/exercises/ex5/images/ex5_22.png)
 
 
@@ -142,4 +147,10 @@ At this point, note that we have already created a User Role with the 'APIArtifa
 ![](/exercises/ex5/images/ex5_1_17.png)
 
 ![](/exercises/ex5/images/ex5_1_18.png)
+
+## Summary
+
+Congratulations! You have successfully completed the Exercise **Deploy an API Artefact to connect to an S/4HANA Odata.**
+
+Many congratulations for participating and completing the Teched Jumpstart session **IN180 - Future-proof your SAP PI/PO investments with SAP Integration Suite.** 
 
