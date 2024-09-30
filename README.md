@@ -30,6 +30,8 @@ You will also need a testing tool installed on your local machine to connect to 
 
 > [!NOTE]
 > You will not be able to use your existing SAP BTP Trial Account or the BTP Free Tier Account to run this exercise as we need connections to an existing SAP Process Orchestration system and an instance of Edge Integration Cell.
+>
+> We have set up the tenants for you to explore during the IN180 jump-start session. We can accommodate up to 180 users at the same time on a first-come, first-served basis. The systems will be available for 10 days after the virtual TechEd, until 20th November 2024.
 > 
 In case you do not have an existing user account (S/P/I/D/C User), follow the steps in the [Prerequisite](exercises/prerequisites/) exercise to create a user account.
 
