@@ -27,7 +27,7 @@ Key Highlights:
 - Supports use cases of data compliance and governance by processing data locally
 - Route business events from SAP applications to event brokers
 - Configure and manage multiple Edge Integration Cells with an SAP Integration Suite cloud tenant
-- Business continuity during temporary connectivity loss (up to 4 hrs)
+- Business continuity during temporary connectivity loss
 - Migration path for PI/PO customers
 
 ## Summary
