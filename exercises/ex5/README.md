@@ -9,9 +9,11 @@ As a prerequisite, we must first identify the S/4HANA OData service we want to e
 > Access to an onpremise S/4HANA system has not been provided as part of this TechEd exercise. The screenshot here is just for your information. 
 > 
 As seen in the screenshot, we will use the standard GWSAMPLE_BASIC Service. You can see that the Service is in an Activated state.
+
 ![](/exercises/ex5/images/ex5_0.png)
 
-As a test, we invoke the $metadata resource and can already see that the BusinessPartnerSet collection exists. 
+<br>As a test, we invoke the $metadata resource and can already see that the BusinessPartnerSet collection exists. 
+
 ![](/exercises/ex5/images/ex5_0_1.png)
 > [!NOTE]
 > The backend endpoint shown in the picture above can only be accessed in a network that the S/4HANA Onpremise system is installed into. 
@@ -21,18 +23,22 @@ As a test, we invoke the $metadata resource and can already see that the Busines
 In this section, let us head back to the Integration Suite UI and deploy the 'API' artifact.
 
 Go to the 'Integrations and API' section in the 'Design' tab. Get into the Package you previously created in Exercise 4. Go to the 'Artifacts' sub-tab and click 'Edit'.
+
 ![](/exercises/ex5/images/ex5_1.png)
 
-Click on 'Add' in the header region and select 'API'.
+<br>Click on 'Add' in the header region and select 'API'.
+
 ![](/exercises/ex5/images/ex5_2.png)
 
-In the 'Create API' dialog, select the 'Edge Integration Cell' from the Runtime Profile drop-down. Click on Next.
+<br>In the 'Create API' dialog, select the 'Edge Integration Cell' from the Runtime Profile drop-down. Click on Next.
+
 ![](/exercises/ex5/images/ex5_3.png)
 
-There are multiple entry points to indicate the backend Service we want to manage as an API. Select 'URL' to proceed with the exercise and click 'Next'.
+<br>There are multiple entry points to indicate the backend Service we want to manage as an API. Select 'URL' to proceed with the exercise and click 'Next'.
+
 ![](/exercises/ex5/images/ex5_4.png)
 
-Enter the following values as inputs for the 'API Details'.
+<br>Enter the following values as inputs for the 'API Details'.
 | Field | Value |
 | ----- | ----- |
 | Name | BusinessPartnerAPI_UserXX (prefer to indicate your user name here) |
@@ -47,63 +53,80 @@ Enter the following values as inputs for the 'API Details'.
 
 <br>![](/exercises/ex5/images/ex5_5.png)
 
-Once the API is created, you will be taken to the 'Overview' tab. Verify your inputs and head over to the 'Resources' tab.
+<br>Once the API is created, you will be taken to the 'Overview' tab. Verify your inputs and head over to the 'Resources' tab.
+
 ![](/exercises/ex5/images/ex5_6.png)
 
-Take a moment to familiarize yourself with the auto-generated Swagger UI / Open API specification rendition of Resources, Operations, and the corresponding documentation snippets.
+<br>Take a moment to familiarize yourself with the auto-generated Swagger UI / Open API specification rendition of Resources, Operations, and the corresponding documentation snippets.
+
 ![](/exercises/ex5/images/ex5_7.png)
 
 ## Configure the API Artefact
 Now that the API is created, in this section we will configure the properties.
 
 Double-click anywhere on the API edition screen to launch the policy editor sheet.
+
 ![](/exercises/ex5/images/ex5_8.png)
 
-Verify that the property editor screen shows up.
+<br>Verify that the property editor screen shows up.
+
 ![](/exercises/ex5/images/ex5_9.png)
 
-Notice that the system has added an ODATA2 Sender Adapter and an ODATA Reciever Adapter connecting the Client and the Target respectively. 
+<br>Notice that the system has added an ODATA2 Sender Adapter and an ODATA Reciever Adapter connecting the Client and the Target respectively. 
+
 ![](/exercises/ex5/images/ex5_10.png)
 
-Click on 'Edit' to start editing. Select the OData adapter on the receiver side.
+<br>Click on 'Edit' to start editing. Select the OData adapter on the receiver side.
+
 ![](/exercises/ex5/images/ex5_11.png)
 
-In the 'Connection' sub-pane, make sure you change the Authentication from 'None to 'Basic'. Enter `s4hanacredentials` as the value in the 'Credential Name' text box. You may verify subsequently that within the Security Material section, we have already created a Basic Authentication credential needed to access the S/4HANA OData Service. 
+<br>In the 'Connection' sub-pane, make sure you change the Authentication from 'None to 'Basic'. Enter `s4hanacredentials` as the value in the 'Credential Name' text box. You may verify subsequently that within the Security Material section, we have already created a Basic Authentication credential needed to access the S/4HANA OData Service. 
+
 ![](/exercises/ex5/images/ex5_12.png)
 
-Next, Click on the 'Authentication' step. Verify that the 'Client Certificate' and 'OAuth' are selected. 
+<br>Next, Click on the 'Authentication' step. Verify that the 'Client Certificate' and 'OAuth' are selected. 
 > [!NOTE]
 > Add 'Basic Authentication' to the supported type optionally if it is cumbersome to set up OAuth client credentials in the client tool (e.g. Postman) that you intend to test with, in the following section. 
 >
+
 ![](/exercises/ex5/images/ex5_13.png)
 
-Look for 'Authorization' policy in the 'search and Add a Step' text area. In the next set of steps, we will add the policies to manage the behavior of the API.
+<br>Look for 'Authorization' policy in the 'search and Add a Step' text area. In the next set of steps, we will add the policies to manage the behavior of the API.
+
 ![](/exercises/ex5/images/ex5_14.png)
 
 ## Add policies to manage the API Artefact
 
 Drag and add the 'Authorization' policy step after the 'Authentication' step and before the 'Request-Reply' step. In the 'Scope' region within the Policy Settings sub-tab, add a scope called `APIArtifactUser`
+
 ![](/exercises/ex5/images/ex5_15.png)
 
-At this point, note that we have already created a User Role with the 'APIArtifactUser' name within the Tenant Administration settings page. 
+<br>At this point, note that we have already created a User Role with the 'APIArtifactUser' name within the Tenant Administration settings page. 
+
 ![](/exercises/ex5/images/ex5_16.png)
 
-Select the quota policy, and under Policy Settings, fill in the details shown in the screenshot below. Enter Quota Identifier as `${request.header['X-Forwarded-For']}`
+<br>Select the quota policy, and under Policy Settings, fill in the details shown in the screenshot below. Enter Quota Identifier as `${request.header['X-Forwarded-For']}`
+
 ![](/exercises/ex5/images/ex5_17.png)
 
-Save the Iflow.
+<br>Save the Iflow.
+
 ![](/exercises/ex5/images/ex5_18.png)
 
-Click on the three dots from the top-hand right corner and select Deploy.
+<br>Click on the three dots from the top-hand right corner and select Deploy.
+
 ![](/exercises/ex5/images/ex5_19.png)
 
-Select Yes on the confirmation dialog.
+<br>Select Yes on the confirmation dialog.
+
 ![](/exercises/ex5/images/ex5_20.png)
 
-Status of the artifact should be  STARTED
+<br>Status of the artifact should be  STARTED
+
 ![](/exercises/ex5/images/ex5_21.png)
 
-Navigate back to the Monitor -> Integrations and APIs. Select **Manage Integration Content** tile and then Select Runtime as **Edge Integration Cell**. Your deployed Integration flow should be in started state. Copy the API Endpoint URL.
+<br>Navigate back to the Monitor -> Integrations and APIs. Select **Manage Integration Content** tile and then Select Runtime as **Edge Integration Cell**. Your deployed Integration flow should be in started state. Copy the API Endpoint URL.
+
 ![](/exercises/ex5/images/ex5_22.png)
 
 
