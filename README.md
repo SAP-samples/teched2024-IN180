@@ -11,7 +11,9 @@ Customers want to elevate and migrate their mature production-grade SAP Process 
 We first look at a **SAP Process Integration (PI)** landscape with a simple Integrated Configuration object (ICO) representing a Web Service-based Integration pattern to an OnPremise S/4HANA System. <br><br>
 We then dive into **migration assessment** to assess the technical efforts involved in the migration process and evaluate how various integration scenarios might be migrated. After having finished the assessment of the current SAP Process Integration landscape and having estimated the effort needed to migrate with the Interface Migration Assessment capability, the next step is the actual migration. The goal of the migration tool is to provide a semi-automated migration where interfaces in **SAP Cloud Integration** will be automatically created based on SAP Process Integration information so that ideally 60-70% of technical migration efforts are automated. The migration of scenarios is based on a pattern approach, which means that integration flow patterns are used as a skeleton to migrate the content and create the final integration flows, and maximize reusability.<br><br>
 We then look at **Edge Integration Cell**, the next-generation hybrid integration runtime offered with SAP Integration Suite as a deployment vehicle for the migrated content. Our principal goal is to demonstrate a 'Ground to Ground' integration pattern. We achieve this by putting the Edge Integration Cell runtime, the SAP PI system, and S/4HANA System in the same network zone as opposed to opening everything to the Internet.<br><br>
-In the leg of the exercise, we look at deployment and managing an **API Artifact** as a proxy to S/4HANA OData Service, keeping the motivations for an API-centric integration in mind.  
+In the leg of the exercise, we look at deployment and managing an **API Artifact** as a proxy to S/4HANA OData Service, keeping the motivations for an API-centric integration in mind. 
+
+![](/images/future-proof.png)
 
 ## Pre-requisites
 
