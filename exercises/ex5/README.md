@@ -80,7 +80,7 @@ Double-click anywhere on the API edition screen to launch the policy editor shee
 
 ![](/exercises/ex5/images/ex5_11.png)
 
-<br>In the 'Connection' sub-pane, make sure you change the Authentication from 'None to 'Basic'. Enter `s4hanacredentials` as the value in the 'Credential Name' text box. You may verify subsequently that within the Security Material section, we have already created a Basic Authentication credential needed to access the S/4HANA OData Service. 
+<br>Click on the `OData` Adapter that connects to the Reciver(Target) system. In the 'Connection' sub-pane, make sure you change the Authentication from 'None to 'Basic'. Enter `s4hanacredentials` as the value in the 'Credential Name' text box. You may verify subsequently that within the Security Material section, we have already created a Basic Authentication credential needed to access the S/4HANA OData Service. 
 
 ![](/exercises/ex5/images/ex5_12.png)
 
@@ -101,21 +101,38 @@ Drag and add the 'Authorization' policy step after the 'Authentication' step and
 
 ![](/exercises/ex5/images/ex5_15.png)
 
-<br>At this point, note that we have already created a User Role with the 'APIArtifactUser' name within the Tenant Administration settings page. 
+<br>At this point, note that we have already created a User Role with the 'APIArtifactUser' name within the Tenant Administration settings page. To inspect this, launch a new browser window, head over to the 'Monitor' tab -> Integration and APIs section. Click on the 'User Roles' tile.
 
-![](/exercises/ex5/images/ex5_16.png)
+![](/exercises/ex5/images/ex5_2_1.png)
 
-<br>Select the quota policy, and under Policy Settings, fill in the details shown in the screenshot below. Enter Quota Identifier as `${request.header['X-Forwarded-For']}`
+<br>Notice that 'APIArtifactUser' exists as a user role in addition to the default 'ESBMessaging.send'. 
 
-![](/exercises/ex5/images/ex5_17.png)
+![](/exercises/ex5/images/ex5_2_2.png)
 
-<br>Save the Iflow.
+<br>Head back the API artifact and click on (+) to add a flow step after the 'Authorization' step.
 
-![](/exercises/ex5/images/ex5_18.png)
+![](/exercises/ex5/images/ex5_2_base.png)
 
-<br>Click on the three dots from the top-hand right corner and select Deploy.
+<br>Add a 'Surge Protection' policy step from the canvas.
 
-![](/exercises/ex5/images/ex5_19.png)
+![](/exercises/ex5/images/ex5_2_3.png)
+
+<br>Click on the step and it opens up the property sheet. Protect against a surge of '10' calls within a duration of '60' 'seconds' of duration unit.
+
+![](/exercises/ex5/images/ex5_2_4.png)
+
+<br> Next, let's add a quota policy to assign a call quota to unique clients. Click on (+) to add a flow step after the 'SurgeProtection' step. 
+
+![](/exercises/ex5/images/ex5_2_5.png)
+
+<br>Select the quota policy, and under Policy Settings, fill in the details shown in the screenshot below. For the start time, click on the data picker and select a date that is prior to the current timestamp. We assign the caller a quota of 5 calls within a minute's duration. Note that this value is lesser than the 'surge' we protected against in the previous step. Enter Quota Identifier as `${request.header['X-Forwarded-For']}`. 
+
+<br>This identifier needs to resolve to a value that is unique to the caller, hence we have resorted to the 'x-forwarded-for' header, which has the details of the originating IP.
+Though we don't show this explicity in the exercise, during the setup time, we did enable the option to retain the client IP in the request header.
+
+<br>Save and deploy the API.
+
+![](/exercises/ex5/images/ex5_2_6.png)
 
 <br>Select Yes on the confirmation dialog.
 
@@ -131,21 +148,41 @@ Drag and add the 'Authorization' policy step after the 'Authentication' step and
 
 
 ## Test the API
+Now that the API is deployed, in this section we will Test the API and adjust the policies to handle a unique situation we will discover during testing.
+
+We will continue using Bruno for testing, the tool used in ex4 as well. Create a New Request. 
+
 ![](/exercises/ex5/images/ex5_1_1.png)
+
+<br>Give the Request a name. Let's call it 'BusinessPartnerAPI' and and paste the API URL copied from the previous step. Select the 'GET' Operation.
 
 ![](/exercises/ex5/images/ex5_1_2.png)
 
+<br>Head over to the 'Auth' section.
+
 ![](/exercises/ex5/images/ex5_1_3.png)
+
+<br> Select 'OAuth 2.0' from the auth drop-down.
 
 ![](/exercises/ex5/images/ex5_1_4.png)
 
+<br> Now refer back to the TenantBooker app and the credentials we had saved earlier. Copy the Token URL and client credentials for the 'Process Integration' section.
+
 ![](/exercises/ex5/images/tenantbooker_1.png)
+
+<br> Select 'Client Credentials' grant type and copy the token URL and client credentials in the respective fields. Invoke the 'Get Access Token' button.
 
 ![](/exercises/ex5/images/ex5_1_5.png)
 
+<br> Copy the contents of the `access_token` atribute from the Response section. Make a mental note of the `scope` attribute. It points to 'ESBMessaging.send', the default role mapped to the client credentials.
+
 ![](/exercises/ex5/images/ex5_1_6.png)
 
+<br> In the Auth section, change the type  from 'OAuth 2.0' to 'Bearer Token',  paste the access token copied from the previous step and click on the -> Send icon at the right side of the screen.
+
 ![](/exercises/ex5/images/ex5_1_7.png)
+
+<br> As expected, you should be presented with a 403 Forbidden HTTP response code with the message stating that authorizations did not match.
 
 ![](/exercises/ex5/images/ex5_1_8.png)
 
@@ -162,6 +199,14 @@ Drag and add the 'Authorization' policy step after the 'Authentication' step and
 ![](/exercises/ex5/images/ex5_1_13.png)
 
 ![](/exercises/ex5/images/ex5_1_14.png)
+
+![](/exercises/ex5/images/ex5_2_7.png)
+
+![](/exercises/ex5/images/ex5_2_8.png)
+
+![](/exercises/ex5/images/ex5_2_9.png)
+
+![](/exercises/ex5/images/ex5_2_14.png)
 
 ![](/exercises/ex5/images/ex5_1_15.png)
 
