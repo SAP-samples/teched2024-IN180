@@ -129,7 +129,9 @@ Drag and add the 'Authorization' policy step after the 'Authentication' step and
 <br>Select the quota policy, and under Policy Settings, fill in the details shown in the screenshot below. For the start time, click on the data picker and select a date that is before the current timestamp. We assign the caller a quota of 5 calls within a minute's duration. Note that this value is lesser than the 'surge' we protected against in the previous step. Enter Quota Identifier as `${request.header['X-Forwarded-For']}`. 
 
 <br>This identifier needs to resolve to a value that is unique to the caller, hence we have resorted to the 'x-forwarded-for' header, which has the details of the originating IP.
-Though we don't show this explicitly in the exercise, during the Edge Integration Cell setup time, we did enable the option to retain the client IP in the request header. Look at the picture below to see how the configuration screen for the EIC node stands.
+Though we don't cover this explicitly in the exercise, during the Edge Integration Cell setup time, we did enable the option to retain the client IP in the request header during Istio configuration. Look at the picture below to see how the configuration screen for the EIC node stands.
+
+![](/exercises/ex5/images/ex5_2_4_4.png)
 
 <br>Save and deploy the API.
 
@@ -250,6 +252,12 @@ We will continue using Bruno for testing, the tool used in ex4 as well. Create a
 ![](/exercises/ex5/images/ex5_2_24.png)
 
 ![](/exercises/ex5/images/ex5_2_25.png)
+
+![](/exercises/ex5/images/ex5_2_4_3.png)
+
+![](/exercises/ex5/images/ex5_2_4_1.png)
+
+![](/exercises/ex5/images/ex5_2_4_2.png)
 
 ## Summary
 
