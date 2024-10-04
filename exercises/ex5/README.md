@@ -81,7 +81,7 @@ Double-click anywhere on the API edition screen to launch the policy editor shee
 
 ![](/exercises/ex5/images/ex5_11.png)
 
-<br>Click on the `OData` Adapter that connects to the Reciver(Target) system. In the 'Connection' sub-pane, make sure you change the Authentication from 'None to 'Basic'. Enter `s4hanacredentials` as the value in the 'Credential Name' text box. You can verify later that within the Security Material section, we have already created a Basic Authentication credential needed to access the S/4HANA OData Service. 
+<br>Click on the `OData` Adapter that connects to the Receiver (Target) system. In the 'Connection' sub-pane, make sure you change the Authentication from 'None to 'Basic'. Enter `s4hanacredentials` as the value in the 'Credential Name' text box. You can verify later that within the Security Material section, we have already created a Basic Authentication credential needed to access the S/4HANA OData Service. 
 
 ![](/exercises/ex5/images/ex5_12.png)
 
@@ -126,7 +126,7 @@ Drag and add the 'Authorization' policy step after the 'Authentication' step and
 
 ![](/exercises/ex5/images/ex5_2_5.png)
 
-<br>Select the quota policy, and under Policy Settings, fill in the details shown in the screenshot below. For the start time, click on the data picker and select a date that is before the current timestamp. We assign the caller a quota of 5 calls within a minute's duration. Note that this value is lesser than the 'surge' we protected against in the previous step. Enter Quota Identifier as `${request.header['X-Forwarded-For']}`. 
+<br>Select the quota policy, and under Policy Settings, fill in the details shown in the screenshot below. For the start time, click on the data picker and select a date that is before the current timestamp. We assign the caller a quota of 5 calls within one minute's duration. Note that this value is lesser than the 'surge' we protected against in the previous step. Enter Quota Identifier as `${request.header['X-Forwarded-For']}`. 
 
 <br>This identifier needs to resolve to a value that is unique to the caller, hence we have resorted to the 'x-forwarded-for' header, which has the details of the originating IP.
 Though we don't cover this explicitly in the exercise, during the Edge Integration Cell setup time, we did enable the option to retain the client IP in the request header during Istio configuration. Look at the picture below to see how the configuration screen for the EIC node stands.
@@ -141,7 +141,7 @@ Though we don't cover this explicitly in the exercise, during the Edge Integrati
 
 ![](/exercises/ex5/images/ex5_20.png)
 
-<br>Status of the artifact should be  STARTED
+<br>Status of the artifact should be  STARTED.
 
 ![](/exercises/ex5/images/ex5_21.png)
 
@@ -153,7 +153,7 @@ Though we don't cover this explicitly in the exercise, during the Edge Integrati
 ## Test the API
 Now that the API is deployed, in this section we will Test the API and adjust the policies to handle a unique situation we will discover during testing.
 
-We will continue using Bruno for testing, the tool used in ex4 as well. Create a New Request. 
+We will continue using Bruno for testing, the tool used in ex4 as well. Create a New Request.
 
 ![](/exercises/ex5/images/ex5_1_1.png)
 
@@ -189,7 +189,7 @@ We will continue using Bruno for testing, the tool used in ex4 as well. Create a
 
 ![](/exercises/ex5/images/ex5_1_8.png)
 
-<br> It's always a good practice to look up the monitoring logs to see the exact errorenous steps. Head back to the 'Overview' -> 'Monitoring Message Processing Logs' section in the Integration Suite UI. Look for Failed messags and trace your API
+<br> It's always a good practice to look up the monitoring logs to inspect the exact erroneous steps. Head back to the 'Overview' -> 'Monitoring Message Processing Logs' section in the Integration Suite UI. Look for Failed messages and trace your API.
 
 ![](/exercises/ex5/images/ex5_1_9.png)
 
@@ -197,15 +197,15 @@ We will continue using Bruno for testing, the tool used in ex4 as well. Create a
 
 ![](/exercises/ex5/images/ex5_1_10.png)
 
-<br> You will be led to the 'Authorization' step that failed. 
+<br> You are led to the 'Authorization' step that failed. 
 
 ![](/exercises/ex5/images/ex5_1_11.png)
 
-<br> Click on the 'Log Content' and you can see the actual message that it was unable to validate the scope in the token.
+<br> Click on the 'Log Content' and you can see the actual message stating that it was unable to validate the scope in the token.
 
 ![](/exercises/ex5/images/ex5_1_12.png)
 
-<br>Of course, we need to head back to the tenant booker app and copy the set of client credentials labeled 'API Management API Access...'
+<br>Of course, we need to head back to the tenant booker app and now copy the right set of client credentials labeled 'API Management API Access...'
 
 ![](/exercises/ex5/images/tenantbooker_2.png)
 
@@ -213,19 +213,19 @@ We will continue using Bruno for testing, the tool used in ex4 as well. Create a
 
 ![](/exercises/ex5/images/ex5_1_13.png)
 
-<br> Bingo, if everything was done correctly upto this point. We have our first success. We are presented with HTTP status code 200 and the root service document is back as our response payload.
+<br> Bingo, if everything was done correctly up to this point. We have our first success! We are presented with HTTP status code 200 and the OData service document is back as our response payload.
 
 ![](/exercises/ex5/images/ex5_1_14.png)
 
 > [!NOTE]
-> A note of caution though. If is possible that some testing clients (e.g. Postman) could report a strage client side Decompression failed error. The reason for the error is possibly that the tools are unable to match the content encoding to what it expects. You can see that Postman injects `gzip, deflate, br` within the `Accept-Encoding` header.
+> A word of caution though. Some testing clients (e.g. Postman) could probably report a strange client-side Decompression failed error. The reason for the error is that the client tool was unable to match the content encoding to what it expects. You can see that Postman injects `gzip, deflate, br` within the `Accept-Encoding` header.
 > 
 > <br> We have a trick later in the exercise to deal with this error using the API Schema validation policy.
 > 
 
 ![](/exercises/ex5/images/ex5_2_7.png)
 
-For now to deal with this erreroneous situation, a simple fix would be to drop `br` from the `Accept-Encoding` header. Simply pass `gzip, deflate` alone. Doing so should give you a successful response back.
+For now, to deal with this erroneous situation, a simple fix would be to drop `br` from the `Accept-Encoding` header. Simply pass `gzip, deflate` alone. Doing so should give you a successful response back.
 
 ![](/exercises/ex5/images/ex5_2_8.png)
 
@@ -233,11 +233,11 @@ An interesting thing to note is that though Bruno client succeeded in making a r
 
 ![](/exercises/ex5/images/ex5_2_14.png)
 
-<br> Again, we resort to our simple fix to deal with this situation. Simply strip off the `br` segment from the header and you will be back on track.
+<br> Again, we resort to our fix to deal with this situation. Simply strip off the `br` segment from the header and you will be back on track.
 
 ![](/exercises/ex5/images/ex5_2_9.png)
 
-<br> Now, we are at the point to verify the 'Quota Policy' step we added to our API. Make > 5 requests to the API within a short span (< 60 seconds). You will eventually violate the quota check and will be presented with the `QuotaExceeded` HTTP 429 error code.
+<br> Now, we are at the point of verifying the 'Quota Policy' step we added to our API. Make > 5 requests to the API within a short span (< 60 seconds). You will eventually violate the quota check and be presented with the `QuotaExceeded` HTTP 429 error code.
 
 ![](/exercises/ex5/images/ex5_2_10.png)
 
@@ -245,19 +245,19 @@ An interesting thing to note is that though Bruno client succeeded in making a r
 
 ![](/exercises/ex5/images/ex5_2_30.png)
 
-<br> Inspect the value of the `x-forwarded-for` header. You should an IP string that is unique to your Client from where the request was dispathced.
+<br> Inspect the value of the `x-forwarded-for` header. You should see an IP string that is unique to your Client from where the request was dispatched.
 
 ![](/exercises/ex5/images/ex5_2_29.png)
 
-<br> A simple step would be to go any IP reporting website and match the value of the header with the IP of your client machine.
+<br> A simple step would be to go to any IP reporting website and match the value of the header with that of the IP of your client machine.
 
 ![](/exercises/ex5/images/ex5_2_28.png)
 
-<br> In the next step, I will connect to a VPN device (instead of direct internet) to make a request. Of course, this step is totally optional and makes sense only if you have the means to connect to a different Internet Gateway. 
+<br> In the next step, we will connect to a VPN device (instead of direct internet) to make a request. Of course, this step is optional and makes sense only if you have the means to connect to a different Internet Gateway. 
 
 ![](/exercises/ex5/images/ex5_2_11.png)
 
-<br> Right after the network switch and within the timespan of a minute, make a few calls to the API and you will no longer see the Quota errors. That's because you will recall that we used the `x-forwarded-for` header as the attribute in the policy to uniquely discern calls for quota determination. 
+<br> Right after the network switch and within the timespan of a minute, make a few calls to the API and you will no longer see the Quota errors. That's because you will recall that we used the `x-forwarded-for` header as the attribute in the policy to uniquely discern between calls for quota determination. 
 
 ![](/exercises/ex5/images/ex5_2_12.png)
 
@@ -269,12 +269,12 @@ An interesting thing to note is that though Bruno client succeeded in making a r
 
 ![](/exercises/ex5/images/ex5_2_27.png)
 
-<br> Great going so far! Continue making a few more requests in the same short span of time and now you are presented with a `surgeProtecttionLimitExceeded` failure. This is obviously different from the Quota error we faced earlier. You will recall that we placed a surge protection policy even before the quota step could be inspected. Given that now we have had 2 sets of IP calling the same API 5 times each, the surge protection kicks in. 
+<br> Great going so far! Continue making a few more requests in the same short period and now you are presented with a `surgeProtecttionLimitExceeded` failure. This is different from the Quota error we faced earlier. You will recall that we placed a surge protection policy before the quota step could be inspected. Given that now we have had 2 sets of IPs calling the same API 5 times each, the surge protection kicks in. 
 
 ![](/exercises/ex5/images/ex5_2_13.png)
 
-So far so good. Now let us elegantly handle the `Accept-Encoding` header error by making sure the Client always passes the right value. 
-<br>One way to do this would be to make this definition part of the API schema itself. To do so, let us head back to the API and click on 'Edit'.
+So far so good. Now let us elegantly handle the `Accept-Encoding` header error by ensuring the Client always passes the right value. 
+<br>One way to do this would be to make this definition part of the API schema itself. To do so, let us head back to the API and click 'Edit'.
 
 ![](/exercises/ex5/images/ex5_2_15.png)
 
