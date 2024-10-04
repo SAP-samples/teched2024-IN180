@@ -204,17 +204,51 @@ We will continue using Bruno for testing, the tool used in ex4 as well. Create a
 
 ![](/exercises/ex5/images/ex5_2_8.png)
 
-![](/exercises/ex5/images/ex5_2_9.png)
-
 ![](/exercises/ex5/images/ex5_2_14.png)
 
-![](/exercises/ex5/images/ex5_1_15.png)
+![](/exercises/ex5/images/ex5_2_9.png)
 
-![](/exercises/ex5/images/ex5_1_16.png)
+![](/exercises/ex5/images/ex5_2_10.png)
 
-![](/exercises/ex5/images/ex5_1_17.png)
+![](/exercises/ex5/images/ex5_2_30.png)
 
-![](/exercises/ex5/images/ex5_1_18.png)
+![](/exercises/ex5/images/ex5_2_29.png)
+
+![](/exercises/ex5/images/ex5_2_28.png)
+
+![](/exercises/ex5/images/ex5_2_11.png)
+
+![](/exercises/ex5/images/ex5_2_12.png)
+
+![](/exercises/ex5/images/ex5_2_26.png)
+
+![](/exercises/ex5/images/ex5_2_27.png)
+
+![](/exercises/ex5/images/ex5_2_13.png)
+
+![](/exercises/ex5/images/ex5_2_15.png)
+
+![](/exercises/ex5/images/ex5_2_15.png)
+
+![](/exercises/ex5/images/ex5_2_16.png)
+
+![](/exercises/ex5/images/ex5_2_17.png)
+
+![](/exercises/ex5/images/ex5_2_18.png)
+
+![](/exercises/ex5/images/ex5_2_19.png)
+
+![](/exercises/ex5/images/ex5_2_20.png)
+
+![](/exercises/ex5/images/ex5_2_21.png)
+
+![](/exercises/ex5/images/ex5_2_22.png)
+
+![](/exercises/ex5/images/ex5_2_23.png)
+
+![](/exercises/ex5/images/ex5_2_24.png)
+
+![](/exercises/ex5/images/ex5_2_25.png)
 
 ## Summary
 
