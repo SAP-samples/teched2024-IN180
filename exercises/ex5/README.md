@@ -273,37 +273,67 @@ An interesting thing to note is that though Bruno client succeeded in making a r
 
 ![](/exercises/ex5/images/ex5_2_13.png)
 
-So far so good. Now let us elegantly handle the `Accept-Encoding` header error by ensuring the Client always passes the right value. 
+<br>So far so good. Now let us elegantly handle the `Accept-Encoding` header error by ensuring the Client always passes the right value. 
 <br>One way to do this would be to make this definition part of the API schema itself. To do so, let us head back to the API and click 'Edit'.
 
 ![](/exercises/ex5/images/ex5_2_15.png)
 
-![](/exercises/ex5/images/ex5_2_15.png)
+<br> CLick on 'Switch to API Specification'.
 
 ![](/exercises/ex5/images/ex5_2_16.png)
 
+<br> This opens up the OpenAPI spec file.
+
 ![](/exercises/ex5/images/ex5_2_17.png)
+
+<br> Clear the content and paste the contents of the `gwsample-basic.YAML` file from the resources folder.
 
 ![](/exercises/ex5/images/ex5_2_18.png)
 
+<br> Pay close attention to the snippet in the enhanced YAML. You will see that we have a new segment for the `Accept-Encoding` header that accepts values only specified in the containing `enum`. We accept `gzip`, `deflate` and a combination with both these together. We have entirely eliminated `br`. 
+<br> Save the definition and 'Swtich to API Details'.
+
 ![](/exercises/ex5/images/ex5_2_19.png)
+
+<br> Navigate to the 'Policies' tab.
 
 ![](/exercises/ex5/images/ex5_2_20.png)
 
+<br> Click on (+) to add a new policy flow step after the 'Authorization' step.
+
 ![](/exercises/ex5/images/ex5_2_21.png)
+
+<br> Add the 'API Validation' flow step.
 
 ![](/exercises/ex5/images/ex5_2_22.png)
 
+<br> Click and open the Property page section of the step. Check the 'Headers' box. We can leave the others unchecked. This enforces the validation of the HTTP headers in an incoming client request. 
+<br> Save the changes and 'Deploy'.
+
 ![](/exercises/ex5/images/ex5_2_23.png)
+
+<br> Head back to your testing client and make a request with the `Accept-Encoding` value as `gzip, deflate, br`.
+You should see a failure message coming from the API Validation step.
 
 ![](/exercises/ex5/images/ex5_2_24.png)
 
+<br> Strip off `br` from the header and make a new request. You should see the call getting successfully executed. 
+
 ![](/exercises/ex5/images/ex5_2_25.png)
+
+<br>Do you see a 500 Internal Server Error like so ? If that's the case, chances are that you haven't copied over the Open API Spec file (and have just manually enhanced the OpenAPI spec definitions.)
 
 ![](/exercises/ex5/images/ex5_2_4_3.png)
 
+> [!TIP]
+> Though this is not covered in the scope of this handson exercise, a recommended step for troubleshooting would be to look at the Grafana Logging dashboard, for additional insights. This is accessable from the Edge Lifecycle Management page.
+> 
 ![](/exercises/ex5/images/ex5_2_4_1.png)
 
+
+> [!TIP]
+> A Look at the policyengine logs from the `edge-icell` namespace tells us that the internal server error was cause due to incorrect typecasting between INT and Float values from the OpenAPI Spec file.
+> 
 ![](/exercises/ex5/images/ex5_2_4_2.png)
 
 ## Summary
