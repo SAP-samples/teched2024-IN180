@@ -1,12 +1,13 @@
 ## Exercise 5 - Deploy an API Artefact to connect to an S/4HANA OData Service
 
-In this exercise, we will deploy and manage an API Artefact to connect to a S/4HANA Business Partner OData Service. The metadata document for the said OData Service is provided in the ````resources```` folder of this exercise. Download the ````gwsample-metadata.edmx```` file from the resources folder
+In this exercise, we will deploy and manage an API Artefact to connect to a S/4HANA Business Partner OData Service. The metadata document for the said OData Service is provided in the `resources` folder of this exercise. Download the `gwsample-metadata.edmx` file from the resources folder.
+<br> Also, you will need a modified version of the OpenAPI spec definition in the YAML format that gets internally generated from the said EDMX file for the API artifact. Download the `gwsample-basic.yaml` file from the resources folder.
 
 ## Identity the S/4HANA OData Service
 
 As a prerequisite, we must first identify the S/4HANA OData service we want to expose and manage as an API Artefact. Luckily, we don't have to look too far and the standard BEP namespace in a S/4HANA system enables standard content that we can use out of the box. 
 > [!NOTE]
-> Access to an onpremise S/4HANA system has not been provided as part of this TechEd exercise. The screenshot here is just for your information. 
+> Access to an on-premise S/4HANA system has not been provided as part of this TechEd exercise. The screenshot here is just for your information. 
 > 
 As seen in the screenshot, we will use the standard GWSAMPLE_BASIC Service. You can see that the Service is in an Activated state.
 
@@ -80,18 +81,18 @@ Double-click anywhere on the API edition screen to launch the policy editor shee
 
 ![](/exercises/ex5/images/ex5_11.png)
 
-<br>Click on the `OData` Adapter that connects to the Reciver(Target) system. In the 'Connection' sub-pane, make sure you change the Authentication from 'None to 'Basic'. Enter `s4hanacredentials` as the value in the 'Credential Name' text box. You may verify subsequently that within the Security Material section, we have already created a Basic Authentication credential needed to access the S/4HANA OData Service. 
+<br>Click on the `OData` Adapter that connects to the Reciver(Target) system. In the 'Connection' sub-pane, make sure you change the Authentication from 'None to 'Basic'. Enter `s4hanacredentials` as the value in the 'Credential Name' text box. You can verify later that within the Security Material section, we have already created a Basic Authentication credential needed to access the S/4HANA OData Service. 
 
 ![](/exercises/ex5/images/ex5_12.png)
 
-<br>Next, Click on the 'Authentication' step. Verify that the 'Client Certificate' and 'OAuth' are selected. 
+<br>Next, Click on the 'Authentication' step. Verify that the 'Client Certificate' and 'OAuth' are selected.
 > [!NOTE]
 > Add 'Basic Authentication' to the supported type optionally if it is cumbersome to set up OAuth client credentials in the client tool (e.g. Postman) that you intend to test with, in the following section. 
 >
 
 ![](/exercises/ex5/images/ex5_13.png)
 
-<br>Look for 'Authorization' policy in the 'search and Add a Step' text area. In the next set of steps, we will add the policies to manage the behavior of the API.
+<br>Look for the 'Authorization' policy in the 'Search and Add a Step' text area. In the next set of steps, we will add the policies to manage the behavior of the API.
 
 ![](/exercises/ex5/images/ex5_14.png)
 
@@ -101,7 +102,7 @@ Drag and add the 'Authorization' policy step after the 'Authentication' step and
 
 ![](/exercises/ex5/images/ex5_15.png)
 
-<br>At this point, note that we have already created a User Role with the 'APIArtifactUser' name within the Tenant Administration settings page. To inspect this, launch a new browser window, head over to the 'Monitor' tab -> Integration and APIs section. Click on the 'User Roles' tile.
+<br>At this point, note that we have already created a User Role with the 'APIArtifactUser' name within the Tenant Administration settings page. To inspect this, launch a new browser window, and head over to the 'Monitor' tab -> Integration and APIs section. Click on the 'User Roles' tile.
 
 ![](/exercises/ex5/images/ex5_2_1.png)
 
@@ -109,7 +110,7 @@ Drag and add the 'Authorization' policy step after the 'Authentication' step and
 
 ![](/exercises/ex5/images/ex5_2_2.png)
 
-<br>Head back the API artifact and click on (+) to add a flow step after the 'Authorization' step.
+<br>Head back to the API artifact and click on (+) to add a flow step after the 'Authorization' step.
 
 ![](/exercises/ex5/images/ex5_2_base.png)
 
@@ -125,10 +126,10 @@ Drag and add the 'Authorization' policy step after the 'Authentication' step and
 
 ![](/exercises/ex5/images/ex5_2_5.png)
 
-<br>Select the quota policy, and under Policy Settings, fill in the details shown in the screenshot below. For the start time, click on the data picker and select a date that is prior to the current timestamp. We assign the caller a quota of 5 calls within a minute's duration. Note that this value is lesser than the 'surge' we protected against in the previous step. Enter Quota Identifier as `${request.header['X-Forwarded-For']}`. 
+<br>Select the quota policy, and under Policy Settings, fill in the details shown in the screenshot below. For the start time, click on the data picker and select a date that is before the current timestamp. We assign the caller a quota of 5 calls within a minute's duration. Note that this value is lesser than the 'surge' we protected against in the previous step. Enter Quota Identifier as `${request.header['X-Forwarded-For']}`. 
 
 <br>This identifier needs to resolve to a value that is unique to the caller, hence we have resorted to the 'x-forwarded-for' header, which has the details of the originating IP.
-Though we don't show this explicity in the exercise, during the setup time, we did enable the option to retain the client IP in the request header.
+Though we don't show this explicitly in the exercise, during the Edge Integration Cell setup time, we did enable the option to retain the client IP in the request header. Look at the picture below to see how the configuration screen for the EIC node stands.
 
 <br>Save and deploy the API.
 
@@ -142,7 +143,7 @@ Though we don't show this explicity in the exercise, during the setup time, we d
 
 ![](/exercises/ex5/images/ex5_21.png)
 
-<br>Navigate back to the Monitor -> Integrations and APIs. Select **Manage Integration Content** tile and then Select Runtime as **Edge Integration Cell**. Your deployed Integration flow should be in started state. Copy the API Endpoint URL.
+<br>Navigate back to the Monitor -> Integrations and APIs. Select **Manage Integration Content** tile and then Select Runtime as **Edge Integration Cell**. Your deployed Integration flow should be in the 'started' state. Copy the API Endpoint URL.
 
 ![](/exercises/ex5/images/ex5_22.png)
 
@@ -154,7 +155,7 @@ We will continue using Bruno for testing, the tool used in ex4 as well. Create a
 
 ![](/exercises/ex5/images/ex5_1_1.png)
 
-<br>Give the Request a name. Let's call it 'BusinessPartnerAPI' and and paste the API URL copied from the previous step. Select the 'GET' Operation.
+<br>Give the Request a name. Let's call it 'BusinessPartnerAPI' and paste the API URL copied from the previous step. Select the 'GET' Operation.
 
 ![](/exercises/ex5/images/ex5_1_2.png)
 
@@ -166,11 +167,11 @@ We will continue using Bruno for testing, the tool used in ex4 as well. Create a
 
 ![](/exercises/ex5/images/ex5_1_4.png)
 
-<br> Now refer back to the TenantBooker app and the credentials we had saved earlier. Copy the Token URL and client credentials for the 'Process Integration' section.
+<br> Now refer back to the TenantBooker app and the credentials we did save earlier. Copy the Token URL and client credentials for the 'Process Integration' section.
 
 ![](/exercises/ex5/images/tenantbooker_1.png)
 
-<br> Select 'Client Credentials' grant type and copy the token URL and client credentials in the respective fields. Invoke the 'Get Access Token' button.
+<br> Select the 'Client Credentials' grant type and copy the token URL and client credentials in the respective fields. Invoke the 'Get Access Token' button.
 
 ![](/exercises/ex5/images/ex5_1_5.png)
 
@@ -178,7 +179,7 @@ We will continue using Bruno for testing, the tool used in ex4 as well. Create a
 
 ![](/exercises/ex5/images/ex5_1_6.png)
 
-<br> In the Auth section, change the type  from 'OAuth 2.0' to 'Bearer Token',  paste the access token copied from the previous step and click on the -> Send icon at the right side of the screen.
+<br> In the Auth section, change the type  from 'OAuth 2.0' to 'Bearer Token',  paste the access token copied from the previous step, and click on the -> Send icon at the right side of the screen.
 
 ![](/exercises/ex5/images/ex5_1_7.png)
 
