@@ -1,11 +1,11 @@
-# Exercise 5 - Deploy an API Artefact to connect to an S/4HANA OData Service
+# Exercise 5 - Deploy an API Artifact to connect to an S/4HANA OData Service
 
-In this exercise, we will deploy and manage an API Artefact to connect to a S/4HANA Business Partner OData Service. The metadata document for the said OData Service is provided in the `resources` folder of this exercise. Download the `gwsample-metadata.edmx` file from the resources folder.
+In this exercise, we will deploy and manage an API Artifact to connect to a S/4HANA Business Partner OData Service. The metadata document for the said OData Service is provided in the `resources` folder of this exercise. Download the `gwsample-metadata.edmx` file from the resources folder.
 <br> Also, you will need a modified version of the OpenAPI spec definition in the YAML format that gets internally generated from the said EDMX file for the API artifact. Download the `gwsample-basic.yaml` file from the [resources](/exercises/ex5/resources) folder.
 
 ## Identity the S/4HANA OData Service
 
-As a prerequisite, we must first identify the S/4HANA OData service we want to expose and manage as an API Artefact. Luckily, we don't have to look too far and the standard BEP namespace in a S/4HANA system enables standard content that we can use out of the box. 
+As a prerequisite, we must first identify the S/4HANA OData service we want to expose and manage as an API Artifact. Luckily, we don't have to look too far and the standard BEP namespace in a S/4HANA system enables standard content that we can use out of the box. 
 > [!NOTE]
 > Access to an on-premise S/4HANA system has not been provided as part of this TechEd exercise. The screenshot here is just for your information. 
 > 
@@ -20,7 +20,7 @@ As seen in the screenshot, we will use the standard GWSAMPLE_BASIC Service. You 
 > The backend endpoint shown in the picture above can only be accessed in a network that the S/4HANA Onpremise system is installed into. 
 > 
 
-## Create an API Artefact
+## Create an API Artifact
 In this section, let us head back to the Integration Suite UI and deploy the 'API' artifact.
 
 Go to the 'Integrations and API' section in the 'Design' tab. Get into the Package you previously created in Exercise 4. Go to the 'Artifacts' sub-tab and click 'Edit'.
@@ -62,7 +62,7 @@ Go to the 'Integrations and API' section in the 'Design' tab. Get into the Packa
 
 ![](/exercises/ex5/images/ex5_7.png)
 
-## Configure the API Artefact
+## Configure the API Artifact
 Now that the API is created, in this section we will configure the properties.
 
 Double-click anywhere on the API edition screen to launch the policy editor sheet.
@@ -96,7 +96,7 @@ Double-click anywhere on the API edition screen to launch the policy editor shee
 
 ![](/exercises/ex5/images/ex5_14.png)
 
-## Add policies to manage the API Artefact
+## Add policies to manage the API Artifact
 
 Drag and add the 'Authorization' policy step after the 'Authentication' step and before the 'Request-Reply' step. In the 'Scope' region within the Policy Settings sub-tab, add a scope called `APIArtifactUser`
 
