@@ -1,4 +1,4 @@
-## Exercise 5 - Deploy an API Artefact to connect to an S/4HANA OData Service
+# Exercise 5 - Deploy an API Artefact to connect to an S/4HANA OData Service
 
 In this exercise, we will deploy and manage an API Artefact to connect to a S/4HANA Business Partner OData Service. The metadata document for the said OData Service is provided in the `resources` folder of this exercise. Download the `gwsample-metadata.edmx` file from the resources folder.
 <br> Also, you will need a modified version of the OpenAPI spec definition in the YAML format that gets internally generated from the said EDMX file for the API artifact. Download the `gwsample-basic.yaml` file from the [resources](/exercises/ex5/resources) folder.
