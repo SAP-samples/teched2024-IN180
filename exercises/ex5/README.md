@@ -189,45 +189,92 @@ We will continue using Bruno for testing, the tool used in ex4 as well. Create a
 
 ![](/exercises/ex5/images/ex5_1_8.png)
 
+<br> It's always a good practice to look up the monitoring logs to see the exact errorenous steps. Head back to the 'Overview' -> 'Monitoring Message Processing Logs' section in the Integration Suite UI. Look for Failed messags and trace your API
+
 ![](/exercises/ex5/images/ex5_1_9.png)
+
+<br> Click on the 'Info' Log Level link. 
 
 ![](/exercises/ex5/images/ex5_1_10.png)
 
+<br> You will be led to the 'Authorization' step that failed. 
+
 ![](/exercises/ex5/images/ex5_1_11.png)
+
+<br> Click on the 'Log Content' and you can see the actual message that it was unable to validate the scope in the token.
 
 ![](/exercises/ex5/images/ex5_1_12.png)
 
+<br>Of course, we need to head back to the tenant booker app and copy the set of client credentials labeled 'API Management API Access...'
+
 ![](/exercises/ex5/images/tenantbooker_2.png)
+
+<br> Hit your testing client again, only this time with the right set of credentials. The scope (APIArtefactUser) attached to the access token will indicate so. 
 
 ![](/exercises/ex5/images/ex5_1_13.png)
 
+<br> Bingo, if everything was done correctly upto this point. We have our first success. We are presented with HTTP status code 200 and the root service document is back as our response payload.
+
 ![](/exercises/ex5/images/ex5_1_14.png)
+
+> [!NOTE]
+> A note of caution though. If is possible that some testing clients (e.g. Postman) could report a strage client side Decompression failed error. The reason for the error is possibly that the tools are unable to match the content encoding to what it expects. You can see that Postman injects `gzip, deflate, br` within the `Accept-Encoding` header.
+> 
+> <br> We have a trick later in the exercise to deal with this error using the API Schema validation policy.
+> 
 
 ![](/exercises/ex5/images/ex5_2_7.png)
 
+For now to deal with this erreroneous situation, a simple fix would be to drop `br` from the `Accept-Encoding` header. Simply pass `gzip, deflate` alone. Doing so should give you a successful response back.
+
 ![](/exercises/ex5/images/ex5_2_8.png)
+
+An interesting thing to note is that though Bruno client succeeded in making a request at the `/` root OData service document level, when we append the resource `/BusinessPartnerSet` to our URL segment, we start seeing the same 'Decompression Failure' error message here as well. Notice that this error happens only when the `br` segment is included in the `Accept-Encoding` header.
 
 ![](/exercises/ex5/images/ex5_2_14.png)
 
+<br> Again, we resort to our simple fix to deal with this situation. Simply strip off the `br` segment from the header and you will be back on track.
+
 ![](/exercises/ex5/images/ex5_2_9.png)
+
+<br> Now, we are at the point to verify the 'Quota Policy' step we added to our API. Make > 5 requests to the API within a short span (< 60 seconds). You will eventually violate the quota check and will be presented with the `QuotaExceeded` HTTP 429 error code.
 
 ![](/exercises/ex5/images/ex5_2_10.png)
 
+<br> Navigate to the 'Header' tab.
+
 ![](/exercises/ex5/images/ex5_2_30.png)
+
+<br> Inspect the value of the `x-forwarded-for` header. You should an IP string that is unique to your Client from where the request was dispathced.
 
 ![](/exercises/ex5/images/ex5_2_29.png)
 
+<br> A simple step would be to go any IP reporting website and match the value of the header with the IP of your client machine.
+
 ![](/exercises/ex5/images/ex5_2_28.png)
+
+<br> In the next step, I will connect to a VPN device (instead of direct internet) to make a request. Of course, this step is totally optional and makes sense only if you have the means to connect to a different Internet Gateway. 
 
 ![](/exercises/ex5/images/ex5_2_11.png)
 
+<br> Right after the network switch and within the timespan of a minute, make a few calls to the API and you will no longer see the Quota errors. That's because you will recall that we used the `x-forwarded-for` header as the attribute in the policy to uniquely discern calls for quota determination. 
+
 ![](/exercises/ex5/images/ex5_2_12.png)
+
+<br> To make sure that this indeed is the case, make a note of your newly assigned IP after the network switch.
 
 ![](/exercises/ex5/images/ex5_2_26.png)
 
+<br> Go to the 'Headers' section of your testing client and match the value of the new IP with the `x-forwarded-for` header.
+
 ![](/exercises/ex5/images/ex5_2_27.png)
 
+<br> Great going so far! Continue making a few more requests in the same short span of time and now you are presented with a `surgeProtecttionLimitExceeded` failure. This is obviously different from the Quota error we faced earlier. You will recall that we placed a surge protection policy even before the quota step could be inspected. Given that now we have had 2 sets of IP calling the same API 5 times each, the surge protection kicks in. 
+
 ![](/exercises/ex5/images/ex5_2_13.png)
+
+So far so good. Now let us elegantly handle the `Accept-Encoding` header error by making sure the Client always passes the right value. 
+<br>One way to do this would be to make this definition part of the API schema itself. To do so, let us head back to the API and click on 'Edit'.
 
 ![](/exercises/ex5/images/ex5_2_15.png)
 
