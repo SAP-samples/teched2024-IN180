@@ -3,7 +3,7 @@
 In this exercise, you will
 
 - take a virtual walkthrough of a SAP Process Integration system and look at an ICO (Integration Configuration Object) definition of an interface that exposes a simple SOAP-to-SOAP Integration.
-- note that there is no hands-on for this exercise as there are logistical challenges in enabling each participant to access an onpremise system, so we have decided to enable a virtual walkthrough by looking at screenshots alone.
+- note that there is no hands-on for this exercise as there are logistical challenges in enabling each participant to access an on-premise system, so we have enabled a virtual walkthrough by looking at screenshots alone.
 
 ## Access a virtual machine (or a physical server) connected to the SAP Process Integration instance
 To begin, let us initiate an RDP connection to a Windows virtual machine that lets us connect to the SAP Process Integration Java Server. <br> Here we are using SAP Cloud Appliance Library (SAP Cal) https://cal.sap.com/ to install and manage an instance of SAP Process Integration 7.5 SP28. <br>
@@ -11,7 +11,7 @@ To begin, let us initiate an RDP connection to a Windows virtual machine that le
 ![](/exercises/ex2/images/ex2_14.png)
 
 ## Connect to the Integration Directory
-Let us launch the start page of the Java instance (J2E), the entry point for us to get into the Process Integration tools. Click on Integration Builder to staring building an ICO in the Integration Directory section. <br>
+Let us launch the start page of the Java instance (J2E), the entry point for us to get into the Process Integration tools. Click on Integration Builder to start building an ICO in the Integration Directory section. <br>
 
 ![](/exercises/ex2/images/ex2_1.png)
 
@@ -35,8 +35,8 @@ Let us launch the start page of the Java instance (J2E), the entry point for us 
 
 ![](/exercises/ex2/images/ex2_6.png)
 
-<br>Notice that this channel has also been exposed as a 'SOAP' Adapter type. In the 'General' tab, you will see that the target URL has been set to the Credit Management Web Service `https://vhcals4hci.dummy.nodomain:44300/sap/opu/odata/IWBEP/GWSAMPLE_BASIC/` to get the credit ratings information for a business partner. 
-to learn 
+<br>Notice that this channel has also been exposed as a 'SOAP' Adapter type. In the 'General' tab, you will see that the target URL has been set to the Credit Management Web Service `https://vhcals4hci.dummy.nodomain:44300/sap/bc/srt/scs/sap/creditmanagementaccountbyidqu1?sap-client=100` to get the credit ratings information for a business partner. 
+<br> To know more about the capabilities of this web service, you can look up the API reference [documentation](https://api.sap.com/api/OP_CREDITMANAGEMENTACCOUNTBYIDQU1/overview)  from the SAP Business Accelerator Hub.
 
 ![](/exercises/ex2/images/ex2_7.png)
 
@@ -53,7 +53,7 @@ As an example, look at message type `MT_CreditlanagementAccountRequest`. Notice 
 
 <br>![](/exercises/ex2/images/ex2_10.png)
 
-Next, look at the data types folder. we see a data type named `DT_CreditManagementAccountRequest`. The shema definition for this data type is a complex type with the string variables as described above. 
+Next, look at the data types folder. we see a data type named `DT_CreditManagementAccountRequest`. The schema definition for this data type is a complex type with the string variables as described above. 
 
 <br>![](/exercises/ex2/images/ex2_11.png)
 
@@ -90,7 +90,7 @@ Select 'Basic' Authorization and enter the username and password of your J2E ins
 
 <br>![](/exercises/ex2/images/ex2_20.png)
 
-Finally, we see the response dispensed from our S/4HANA system. Notice that the system returns back a valid value for the 'CreditLimitAmount'.
+Finally, we see the response dispensed from our S/4HANA system. Notice that the system returns a valid value for the 'CreditLimitAmount'.
 
 <br>![](/exercises/ex2/images/ex2_22.png)
 
