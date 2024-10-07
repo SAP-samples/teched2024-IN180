@@ -282,11 +282,13 @@ An interesting thing to note is that though Bruno client succeeded in making a r
 
 ![](/exercises/ex5/images/ex5_2_16.png)
 
-<br> This opens up the OpenAPI spec file.
+<br> This opens up the OpenAPI spec file. 
+<br>Take a backup of this file in your local file system. Make sure you copy the `title` and `url` attributes from the Spec file as indicated in the screenshot. You will need this in the next step.
 
 ![](/exercises/ex5/images/ex5_2_17.png)
 
-<br> Clear the content and paste the contents of the `gwsample-basic.YAML` file from the [resources](/exercises/ex5/resources) folder.
+<br> Clear the text area and paste the contents of the `gwsample-basic.YAML` file you downloaded earlier from the [resources](/exercises/ex5/resources) folder.
+<br> Make sure to paste back the values of the `title` and `url` attributes from your original spec file.
 
 ![](/exercises/ex5/images/ex5_2_18.png)
 
@@ -320,6 +322,10 @@ You should see a failure message coming from the API Validation step.
 <br> Strip off `br` from the header and make a new request. You should see the call getting successfully executed. 
 
 ![](/exercises/ex5/images/ex5_2_25.png)
+
+## Troubleshooting tips
+
+Here are few common pitfalls to avoid.
 
 <br>Do you see a 500 Internal Server Error like so? If that's the case, chances are that you haven't copied over the Open API Spec file (and have just manually enhanced the OpenAPI spec definitions.)
 
