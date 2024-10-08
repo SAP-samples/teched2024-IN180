@@ -8,7 +8,10 @@ In this exercise, you will
 
 ## Explore SAP Integration Suite tooling
 
-Log in to the SAP Integration Suite tenant using the credentials from the tenant booker app. Now let´s explore the different capabilities and navigations of SAP Integration Suite tooling <br>
+Log in to the SAP Integration Suite tenant using the credentials from the tenant booker app. Now let´s explore the different capabilities and navigations of SAP Integration Suite tooling. <br>
+
+> [!NOTE]
+> The screenshots below show more items than the ones you have access to with your user. This is because your user has only the access required to complete the exercises. The screenshots were taken with a user who has admin access in the tenant and the intention is to show you all the capabilities available in SAP Integration Suite.
 
 **Home** is the first screen that you will land upon logging in to SAP Integration Suite. Click on the three-line icon (also called the _hamburger_ icon) in the top left corner to expand the navigation menu items. <br>
 
