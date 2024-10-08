@@ -124,6 +124,8 @@ paths:
             enum:
               - gzip
               - deflate
+              - 'gzip, deflate'
+              - 'deflate, gzip'
       responses:
         '200':
           description: Retrieved entities
