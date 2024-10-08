@@ -5,10 +5,11 @@ In this exercise, we will deploy and manage an API Artifact to connect to a S/4H
 
 ## Identity the S/4HANA OData Service
 
-As a prerequisite, we must first identify the S/4HANA OData service we want to expose and manage as an API Artifact. Luckily, we don't have to look too far and the standard BEP namespace in a S/4HANA system enables standard content that we can use out of the box. 
+As a prerequisite, we must first identify the S/4HANA OData service we want to expose and manage as an API Artifact. Luckily, we don't have to look too far and the standard BEP namespace in a S/4HANA system enables standard content that we can use out of the box.
+
 > [!NOTE]
 > Access to an on-premise S/4HANA system has not been provided as part of this TechEd exercise. The screenshot here is just for your information. 
-> 
+
 As seen in the screenshot, we will use the standard GWSAMPLE_BASIC Service. You can see that the Service is in an Activated state.
 
 ![](/exercises/ex5/images/ex5_0.png)
@@ -126,16 +127,16 @@ Drag and add the 'Authorization' policy step after the 'Authentication' step and
 
 ![](/exercises/ex5/images/ex5_2_5.png)
 
-<br>Select the quota policy, and under Policy Settings, fill in the details shown in the screenshot below. For the start time, click on the data picker and select a date that is before the current timestamp. We assign the caller a quota of 5 calls within one minute's duration. Note that this value is lesser than the 'surge' we protected against in the previous step. Enter Quota Identifier as `${request.header['X-Forwarded-For']}`. 
+<br>Select the quota policy, and under Policy Settings, fill in the details shown in the screenshot below. For the start time, click on the data picker and select a date that is before the current timestamp. We assign the caller a quota of 5 calls within one minute's duration. Note that this value is lesser than the 'surge' we protected against in the previous step. Enter Quota Identifier as `${request.header['X-Forwarded-For']}`.
 
-<br>This identifier needs to resolve to a value that is unique to the caller, hence we have resorted to the 'x-forwarded-for' header, which has the details of the originating IP.
+![](/exercises/ex5/images/ex5_2_6.png)
+
+This identifier needs to resolve to a value that is unique to the caller, hence we have resorted to the 'x-forwarded-for' header, which has the details of the originating IP.
 Though we don't cover this explicitly in the exercise, during the Edge Integration Cell setup time, we did enable the option to retain the client IP in the request header during Istio configuration. Look at the picture below to see how the configuration screen for the EIC node stands.
 
 ![](/exercises/ex5/images/ex5_2_4_4.png)
 
 <br>Save and deploy the API.
-
-![](/exercises/ex5/images/ex5_2_6.png)
 
 <br>Select Yes on the confirmation dialog.
 
