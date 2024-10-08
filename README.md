@@ -49,11 +49,6 @@ Here is a summary of the exercises we will be covering in this hands-on session.
 - [Exercise 4 - Migrate and test a simple SOAP to SOAP scenario](exercises/ex4/)
 - [Exercise 5 - Deploy an API Artefact to connect to a S/4HANA OData Service](exercises/ex5/)
 
-
-**IMPORTANT**
-
-Your repo must contain the .reuse and LICENSES folder and the License section below. DO NOT REMOVE the section or folders/files. Also, remove all unused template assets(images, folders, etc) from the exercises folder. 
-
 ## Contributing
 Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) to understand the contribution guidelines.
 
