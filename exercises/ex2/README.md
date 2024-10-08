@@ -6,7 +6,9 @@ In this exercise, you will
 - note that there is no hands-on for this exercise as there are logistical challenges in enabling each participant to access an on-premise system, so we have enabled a virtual walkthrough by looking at screenshots alone.
 
 ## Access a virtual machine (or a physical server) connected to the SAP Process Integration instance
-To begin, let us initiate an RDP connection to a Windows virtual machine that lets us connect to the SAP Process Integration Java Server. <br> Here we are using SAP Cloud Appliance Library (SAP Cal) https://cal.sap.com/ to install and manage an instance of SAP Process Integration 7.5 SP28. <br>
+To begin, let us initiate an RDP connection to a Windows virtual machine that lets us connect to the SAP Process Integration Java Server. <br> 
+
+Here we are using SAP Cloud Appliance Library (SAP Cal) https://cal.sap.com/ to install and manage an instance of SAP Process Integration 7.5 SP28. <br>
 
 ![](/exercises/ex2/images/ex2_14.png)
 
@@ -49,7 +51,7 @@ Let's head into our 'demo' namespace and inspect the project structure. Look at 
 
 <br>![](/exercises/ex2/images/ex2_9.png)
 
-As an example, look at message type `MT_CreditlanagementAccountRequest`. Notice the schema structure. It includes variables called `DebtorPartyInternalID` and `CreditsegmentInternalID`
+As an example, look at message type `MT_CreditManagementAccountRequest`. Notice the schema structure. It includes variables called `DebtorPartyInternalID` and `CreditsegmentInternalID`
 
 <br>![](/exercises/ex2/images/ex2_10.png)
 
@@ -57,11 +59,11 @@ Next, look at the data types folder. we see a data type named `DT_CreditManageme
 
 <br>![](/exercises/ex2/images/ex2_11.png)
 
-Now, pay attention to the 'Message Mappings'. The `MM_CreditManagementAccountRequest` message mapping maps the `MT_CreditlanagementAccountRequest` to the SOAP data type as exposed in the web service definition.
+Now, pay attention to the 'Message Mappings'. The `MM_CreditManagementAccountRequest` message mapping maps the `MT_CreditManagementAccountRequest` to the SOAP data type as exposed in the web service definition.
 
 <br>![](/exercises/ex2/images/ex2_12.png)
 
-As a last step, we look at the Service Interface of the web service. Let us inspect the structure of the response message for the operation `S_CreditManagementAccountRead_Outbound`. The corresponding WSDL is listed in the window.
+As a last step, we look at the Service Interface of the web service. Let us inspect the structure of the response message for the operation `SI_CreditManagementAccountRead_Outbound`. The corresponding WSDL is listed in the window.
 
 <br>![](/exercises/ex2/images/ex2_13.png)
 

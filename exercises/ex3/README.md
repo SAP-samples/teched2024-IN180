@@ -12,7 +12,8 @@ In the SAP Integration Suite landing page, scroll down to Capabilities, and sele
 
 After completing these steps you will be able to test the connection to your SAP Process Orchestration(PO) system. Additionally, we will also walk you through the steps on how to set up your own PO system. This will help you to do the setup on your own landscape. <br><br>
 
-Note: For this exercise, the connection to a cloud connector has been established, the PO system is connected to the SAP Integration Suite tenant and you do not have Admin roles to add a new system. <br><br>
+> [!NOTE]
+> For this exercise, the connection to a cloud connector has been established, the PO system is connected to the SAP Integration Suite tenant and you do not have Admin roles to add a new system. <br><br>
 
 1. Navigate to **Settings > Integrations**, under System, select J2E System to view the details. <br><be>
 
@@ -20,19 +21,21 @@ Note: For this exercise, the connection to a cloud connector has been establishe
 
 For this exercise, the system setup is already done and you can click on Test Connection to check the connection to PO system. <br><br>
 
-Note: In the Migration Assessment Application, the page now displays information about the Integration Directory and, optionally, the Enterprise Services Repository you connected to your previously created system. <br><br>
+> [!NOTE]
+> In the Migration Assessment Application, the page now displays information about the Integration Directory and, optionally, the Enterprise Services Repository you connected to your previously created system. <br>
 
-2. In the Migration Assessment Application, navigate to **Configure > Rules** <br><be>
+2. In the Migration Assessment Application, navigate to **Configure > Rules** <br><br>
 
 <be>![](/exercises/ex3/images/ConfigureRules.png)
 
 Here you can find a list of rules predefined by SAP. Rules are a set of characteristics according to which the application evaluates whether an integration scenario can be migrated and what effort you can expect. <br><br>
 
-Note: Currently, you can’t add custom rules or edit the standard rules. You can only view the standard rules. <br><br>
+> [!NOTE]
+> Currently, you can’t add custom rules or edit the standard rules. You can only view the standard rules. <br>
 
-As an example, select the rule SenderAdapterType <br><br>
+As an example, select the rule 'SenderAdapterType' <br><br>
 
-3. Open the variant MAIN_SenderAdapterType <br><be>
+3. Open the variant 'MAIN_SenderAdapterType' <br><be>
 
 <be>![](/exercises/ex3/images/SenderAdapterType.png)
 
@@ -87,7 +90,7 @@ Assess your integration scenarios using the information from the data extraction
 
 <be>![](/exercises/ex3/images/ScenarioEvaluationCreate.png)
 
-3. Enter a Request Name as DemoXX (where XX is your userid)and choose a Data Extraction Request from the drop-down or the one you executed previously. For this specific run of your scenario evaluation, enter an Evaluation Run Name as DemoXX (where XX is your userid)and a Description. <br><br>
+3. Enter a Request Name as UserXX (where XX is your userid)and choose a Data Extraction Request from the drop-down or the one you executed previously. For this specific run of your scenario evaluation, enter an Evaluation Run Name as UserXX (where XX is your userid)and a Description. <br><br>
 
 <be>![](/exercises/ex3/images/ScenarioEvaluationDetails.png)
 
