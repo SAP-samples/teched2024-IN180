@@ -39,18 +39,6 @@ As an example, select the rule 'SenderAdapterType' <br><br>
 
 <be>![](/exercises/ex3/images/SenderAdapterType.png)
 
-## Optional - Walkthrough of adding a Process Orchestration System
-Optionally you can try out this section to add the PO system in your own landscape. For this exercise, you do not have the roles to Add the system but we want to walk you through the steps so that you can do it on your landscape. <br><br>
-
-Navigate back to Settings and click on '+' <br><br>
-
-
-Fill in the details and click on Add. <br><br>
-
-
-You will be able to see the newly added systems and additionally you can check the connection by clicking on the Test Connection <br><br>
-
-
 ## Reuse or Create a new Data Extraction Request
 Usually, the data extraction takes some time depending on the number of integration scenarios configured on SAP Process Orchestration. For our exercise, we have configured a handful of scenarios in the SAP Process Orchestration system, so that the extraction runs fast. A recommendation from our side would be to reuse the already created Data Extraction Request. If you still want to create a new one, please follow the below steps. <br><br>
 
