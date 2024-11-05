@@ -22,32 +22,38 @@ Here is a mission that can help you get started with SAP Integration Suite:
 
 • [Get Started with Integration Suite!](https://discovery-center.cloud.sap/protected/index.html#/missiondetail/3258/3327/)
 
-You will need a user account (S/P/I/D/C User) that authenticates to SAP Cloud Identity Service to log in to the SAP Integration Suite sandbox Account set up for you. Once you have the user account handy log in to the Tenant Booker App by opening the URL listed below and book your tenant. This will give you access to one of the tenants that has been provisioned for this hands-on exercise.
+You will be provided with a user account (***UserXX***) that authenticates to SAP Cloud Identity Service to log in to the SAP Integration Suite sandbox Account set up for you. 
 
-• [https://techedtenantbookerapplication-ad5b9d48b.dispatcher.hana.ondemand.com/index.html](https://techedtenantbookerapplication-ad5b9d48b.dispatcher.hana.ondemand.com/index.html)
-
-Follow the steps described [here](https://github.com/SAP-samples/teched2024-IN180/tree/main/exercises/prerequisites#getting-into-tenant-booker-app-and-accessing-sap-integration-suite-tenant) for a guided procedure.
+> [!IMPORTANT]
+> Your instructor will provide you with the tenant URL, username, and password to access the tenant. 
 
 You will also need a testing tool installed on your local machine to connect to the IFlows and API. In this hands-on, we will be referencing screenshots executed in [Bruno](https://www.usebruno.com/) as the testing client. You are free to use any tool of your choice, e,g, Postman, Insomnia, SOAPUI etc. 
 
 > [!NOTE]
 > You will not be able to use your existing SAP BTP Trial Account or the BTP Free Tier Account to run this exercise as we need connections to an existing SAP Process Orchestration system and an instance of Edge Integration Cell.
 >
-> We have set up the tenants for you to explore during the IN180 jump-start session. We can accommodate up to 180 users at the same time on a first-come, first-served basis. The systems will be available for 10 days after the virtual TechEd, until 20th October 2024.
-> 
-In case you do not have an existing user account (S/P/I/D/C User), follow the steps in the [Prerequisite](exercises/prerequisites/) exercise to create a user account.
+> We have set up the tenants for you to explore during the IN180 jump-start session. The systems will be available for 10 days after the TechEd hands-on lab event.
 
 ## Exercises
 
 Here is a summary of the exercises we will be covering in this hands-on session.
 
-- [Prerequisite - Access the Tenant Booker app](exercises/prerequisites/)
 - [Getting Started - An overview of SAP Integration Suite](exercises/ex0/)
 - [Exercise 1 - Access and explore SAP Integration Suite](exercises/ex1/)
 - [Exercise 2 - SAP Process Integration Walkthrough](exercises/ex2/)
 - [Exercise 3 - Migration Assessment](exercises/ex3/)
 - [Exercise 4 - Migrate and test a simple SOAP to SOAP scenario](exercises/ex4/)
 - [Exercise 5 - Deploy an API Artefact to connect to a S/4HANA OData Service](exercises/ex5/)
+
+## Further learning
+
+Here are some additional resources that you can refer to for further learning:
+- Migration Guide for SAP Process Orchestration: https://help.sap.com/docs/migration-guide-po/migration-guide-for-sap-process-orchestration/migration-guide-sap-process-orchestration?locale=en-US
+- SAP Integration Suite Documentation: https://help.sap.com/docs/integration-suite?locale=en-US
+- SAP TechEd 2024 sessions (on-demand replays):
+  - [IN100 | Innovate now with a modern, AI-assisted integration suite](https://www.sap.com/events/teched/virtual/flow/sap/te24/catalog/page/catalog/session/1720287755996001aemK)
+  - [IN103 | Modernize and elevate to the cloud with SAP Integration Suite](https://www.sap.com/events/teched/virtual/flow/sap/te24/catalog/page/catalog/session/1721791179096001rRx3)
+  - [IN202 | Gain flexibility and scalability with a hybrid integration platform](https://www.sap.com/events/teched/virtual/flow/sap/te24/catalog/page/catalog/session/1721792860703001Vo9V)
 
 ## Contributing
 Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) to understand the contribution guidelines.
