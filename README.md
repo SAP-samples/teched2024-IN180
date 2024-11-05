@@ -49,6 +49,16 @@ Here is a summary of the exercises we will be covering in this hands-on session.
 - [Exercise 4 - Migrate and test a simple SOAP to SOAP scenario](exercises/ex4/)
 - [Exercise 5 - Deploy an API Artefact to connect to a S/4HANA OData Service](exercises/ex5/)
 
+## Further learning
+
+Here are some additional resources that you can refer to for further learning:
+- Migration Guide for SAP Process Orchestration: https://help.sap.com/docs/migration-guide-po/migration-guide-for-sap-process-orchestration/migration-guide-sap-process-orchestration?locale=en-US
+- SAP Integration Suite Documentation: https://help.sap.com/docs/integration-suite?locale=en-US
+- SAP TechEd 2024 sessions (on-demand replays):
+  - [IN100 | Innovate now with a modern, AI-assisted integration suite](https://www.sap.com/events/teched/virtual/flow/sap/te24/catalog/page/catalog/session/1720287755996001aemK)
+  - [IN103 | Modernize and elevate to the cloud with SAP Integration Suite](https://www.sap.com/events/teched/virtual/flow/sap/te24/catalog/page/catalog/session/1721791179096001rRx3)
+  - [IN202 | Gain flexibility and scalability with a hybrid integration platform](https://www.sap.com/events/teched/virtual/flow/sap/te24/catalog/page/catalog/session/1721792860703001Vo9V)
+
 ## Contributing
 Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) to understand the contribution guidelines.
 
