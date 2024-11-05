@@ -170,9 +170,10 @@ We will continue using Bruno for testing, the tool used in ex4 as well. Create a
 
 ![](/exercises/ex5/images/ex5_1_4.png)
 
-<br> Now refer back to the TenantBooker app and the credentials we did save earlier. Copy the Token URL and client credentials for the 'Process Integration' section.
+> [!IMPORTANT]
+> The credentials needed in the step below are included in the document shared by your instructor (**ESB Credentials** section).
 
-![](/exercises/ex5/images/tenantbooker_1.png)
+<br> Now refer back to the shared document and the credentials we did save earlier. Copy the Token URL and client credentials for the 'ESB Credentials' section.
 
 <br> Select the 'Client Credentials' grant type and copy the token URL and client credentials in the respective fields. Invoke the 'Get Access Token' button.
 
@@ -206,9 +207,11 @@ We will continue using Bruno for testing, the tool used in ex4 as well. Create a
 
 ![](/exercises/ex5/images/ex5_1_12.png)
 
-<br>Of course, we need to head back to the tenant booker app and now copy the right set of client credentials labeled 'API Management API Access...'
 
-![](/exercises/ex5/images/tenantbooker_2.png)
+> [!IMPORTANT]
+> The credentials needed in the step below are included in the document shared by your instructor (**API Management API Access** section).
+
+Of course, we need to head back to the shared document and now copy the right set of client credentials labeled 'API Management API Access...'
 
 <br> Hit your testing client again, only this time with the right set of credentials. The scope (APIArtefactUser) attached to the access token will indicate so. 
 
