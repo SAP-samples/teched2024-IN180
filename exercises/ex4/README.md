@@ -148,10 +148,12 @@ Having completed these steps, you are now ready to test the interface. To do thi
 </soapenv:Envelope>
 ```
 
-7. Switch to tab **Auth** and choose **OAuth 2.0**. Grant Type must be set to **Client Credentials**. The authentication details can be found in the booker application. Past them and press **Get Access Token**.
+> [!IMPORTANT]
+> The credentials needed in the step below are included in the document shared by your instructor (**ESB Credentials** section). Please use the credentials provided in the document to authenticate the request.
 
-<br>![image](/exercises/ex4/images/Auth_Bruno.png)  
-<br>![image](/exercises/ex4/images/Auth_Booker.png) 
+7. Switch to tab **Auth** and choose **OAuth 2.0**. Grant Type must be set to **Client Credentials**. The authentication details can be found in the shared document (**ESB Credentials** section). Past them and press **Get Access Token**.
+
+<br>![image](/exercises/ex4/images/Auth_Bruno.png) 
 
 
 8. The response contains the Access Token. **Copy** the **"access_token"** value to the clipboard as this is required in the next step for authentication.

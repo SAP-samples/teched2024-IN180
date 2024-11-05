@@ -25,7 +25,7 @@ Here is a mission that can help you get started with SAP Integration Suite:
 You will be provided with a user account (***UserXX***) that authenticates to SAP Cloud Identity Service to log in to the SAP Integration Suite sandbox Account set up for you. 
 
 > [!IMPORTANT]
-> Your instructor will provide you with the tenant URL, username, and password to access the tenant. 
+> Your instructor will provide you with the tenant URL, username, and password to access the tenant.
 
 You will also need a testing tool installed on your local machine to connect to the IFlows and API. In this hands-on, we will be referencing screenshots executed in [Bruno](https://www.usebruno.com/) as the testing client. You are free to use any tool of your choice, e,g, Postman, Insomnia, SOAPUI etc. 
 
